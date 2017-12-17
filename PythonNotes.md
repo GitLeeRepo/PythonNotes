@@ -96,7 +96,11 @@ Python is a dynamically typed language, and the type can be dynamically changed 
 
 Strings are an indexed squence of characters, with individual characters accessible using an index operator, i.e., **str\[i\]**.
 
-### Multiline Strings
+### String Quoting
+
+Strings can be either single, or double quoted, both of which are generally acceptable as long as their use is consistent.  When a string contaains a single quote within it, you can use double quotes to avoid having to escape it with a backslash, with the same being true of double quotes within single quotes.
+
+### Multiline Strings (triple quotes)
 
 ```python
 str = '''This is
@@ -137,12 +141,23 @@ print (s[1:-4]) #ello wo - same result indexing from right
 
 ## Lists
 
+Note the following in the list below:
+* Lists can contain mixed types
+* Lists can be sliced with **\[n:n\]** notation
+* Lists can be appended to (they are mutable) **empty.append()**
+* You can create references to lists, in which two variables point to the same list
+* You can make copies of lists
+* You can contcatenate lists creating a combined list
+* You can print the entire list with one print (no loops), subsets (through slicing) or individual elements through indexing
+* Lists can be created from splitting strings based on a delimiter
+
 ```python
 import sys
 
 food = [ 'cereal', 'cheese', 'nuts', 'milk', 'corn' ]
 items = [ 'paper', 'soap', 'cleaner' ]
 mixed = [ 'one', 1, 'two', 2, 'three', 3 ]
+empty = []
 
 # print all elements
 print(food)
@@ -150,14 +165,13 @@ print(food[:])
 print(food[0:])
 print(food[0:9])
 
-# print one element at a time
+# print one element
 print(food[3], "and", food[0])
-#>milk can cereal
 
 # print a range of elements
-print(food[0:4])  # print the first 4 elements
-print(food[0:-1]) # print all but the last element
-print(food[4:])   # print [ 'corn' ]
+print(food[0:4])     # print the first 4 elements
+print(food[0:-1])    # print all but the last element
+print(food[4:])      # print [ 'corn' ]
 
 # concatenate lists, creates a new list
 
@@ -173,6 +187,22 @@ strcpy = mixed[:]  # two different copies of the list
 mixed[0] = "uno"   # change the original
 print(strptr)      # pointer version has the change
 print(strcpy)      # the copied version does not have the change
+
+# append to an empty list (works with any list)
+empty.append('not')
+empty.append('empty')
+empty.append('anymore')
+print(empty)
+
+# using split
+fromsplit = "item1, item2, item3".split(",")
+print(fromsplit)
+
+# this appends a nested list within a list
+empty.append(fromsplit)
+print(empty)        # prints all list items, including nested list
+print(empty[3])     # prints the nested list only
+print(empty[3][1])  # prints an individual item from the nested list
 ```
 
 ## Tuples
@@ -183,20 +213,21 @@ print(strcpy)      # the copied version does not have the change
 * They are declared with parenthesis rather than square brackets
 * They are intended to be used as a whole object made up of parts, not as in a collection of distinct objects as in a list
 * They can be assigned to multiple variables in one operation **first_name, last_name, phone = person**
+* For a large number of small sequences, tuples are generally more memory efficient than lists.  This is because tuples are immutable, while lists are mutible, and therefore the interpretter tends to overallocate for lists in anticipation that they will be expanded.
 
 ```python
 import sys
 
 person = ( 'Bill', 'Jones', '(999)999-9999' )
+single = ( 'justone', )  # note the trailing comma
 
 # assign to individual variables
 first_name, last_name, phone = person
 
 print(person)
-#> ('Bill', 'Jones', '(999)999-9999')
-
 print(first_name, last_name, phone)
-#> Bill Jones (999)999-9999
+
+print(single) # tuple with one element
 ```
 
 # Operators and Expressions
