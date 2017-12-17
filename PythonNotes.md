@@ -288,7 +288,7 @@ print("nodupes after adding (4), updating [6, 7, 8], and removing (1):", nodupes
 
 **Output:**
 
-```bash
+```
 set1: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 set2: {1, 3, 5, 9, 7}
 set3: {8, 2, 10, 4, 6}
@@ -306,6 +306,50 @@ symetric difference set1 ^ set3 {1, 3, 5, 7, 9}
 symetric difference set2 ^ set3 {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 duplicates automatically removed: {1, 2, 3, 5} from [1, 2, 5, 2, 3, 1]
 nodupes after adding (4), updating [6, 7, 8], and removing (1): {2, 3, 4, 5, 6, 7, 8}
+```
+
+## Dictionaries
+
+A **dictionary** is an **associative array** / **hash table** that contains objects that are indexed by keys.  The use **key/value** pairs for storing information.  Dictionaries are one of the most efficient ways of accessing indexed data based on a key value.
+
+### Dictionary Examples
+
+```python
+import sys
+
+items = {
+    "item1" : 5.53,
+    "item2" : 9.99,
+    "item3" : 3.99,
+    "item4" : 4.99,
+    "item5" : 2.21
+}
+
+
+for item in items:
+    print(item, items[item])
+
+
+# a couple of ways to add to dictonary
+items["item6"] = 7.57
+items.update({"item7" : 3.33})
+
+print("added new items")
+if "item6" in items:
+    print("found new: item6", items["item6"])
+if "item7" in items:
+    print("found new: item7", items["item7"])
+
+# delete an entry
+del items["item2"]
+print("deleted item")
+if "item2" not in items:
+    print("item2 not found")
+
+# print the full list again
+print("Now with two new items, and one removed item:")
+for item in items:
+    print(item, items[item])
 ```
 
 # Operators and Expressions
