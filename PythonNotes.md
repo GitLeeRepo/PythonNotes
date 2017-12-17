@@ -4,6 +4,10 @@ Notes on the Python programming language
 
 # References
 
+## Books
+
+* [Python Essentials](https://www.amazon.com/Python-Essential-Reference-Developers-Library-ebook/dp/B002EF2AQ6)
+
 ## YouTube Videos
 
 * [Google Python Class Series](https://www.youtube.com/watch?v=tKTZoB2Vjuk)
@@ -21,6 +25,30 @@ TODO - Placeholder
 # IDLE Interactive Environment
 
 TODO - Placeholder
+
+# File Structure
+
+## Basic Python File Structure
+
+```python
+# Imports
+import sys
+import os
+
+# Comment
+
+'''
+Multi
+Line
+Comment
+'''
+# function
+def hello():
+    print("Hello, world")
+
+# function call
+hello()
+```
 
 # Types and Objects
 
