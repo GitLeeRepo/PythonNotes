@@ -88,6 +88,26 @@ main()
 * Callable - callable as functions
 * Class Objects
 
+## Strings
+
+### Multiline Strings
+
+```python
+str = '''This is
+written on multiple lines'''
+
+print(str)
+>This is
+>written on multiple lines
+```
+
+### String Concatenation
+
+```python
+newStr = str1 + str2
+```
+
+
 # Operators and Expressions
 
 * **+** - addition
@@ -113,16 +133,25 @@ TODO - Placeholder
 ```python
 print("Hello, world")
 >Hello, world
+
 print("Hello,", "world") # concatenates with a space in between
->Hello, world"
+>Hello, world
+
 print("Hello,""world") # concatenates without a space in between
 >Hello,world"
+
+print("Hello, ",end="") # print without newline
+print("world")
+>Hello, world
+
+print("=" * 50) # repeat the string 50 times
+>==================================================
 
 print(25*4)
 >100
 ```
 
-## Print Format
+## Print Formatted
 
 ```python
 print("The correct answer is {0:d}".format(42))
