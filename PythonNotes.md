@@ -107,6 +107,17 @@ print(str)
 newStr = str1 + str2
 ```
 
+### Using Slice on Strings
+
+```python
+s = "Hello World!"
+print (s)
+#using slice syntax below
+print (s[:5]) #Hello -  first 5 chars
+print (s[6:-1]) #World - start after 6 to 1 less than end of string
+print (s[1:8]) #ello wo - start after 1 through 8
+print (s[1:-4]) #ello wo - same result indexing from right
+```
 
 # Operators and Expressions
 
