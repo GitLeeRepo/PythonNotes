@@ -1,6 +1,6 @@
 # Overview
 
-Notes on the Python programming language
+Notes on the Python3 programming language, examples use Python3 syntax, not Python2.
 
 # References
 
@@ -93,6 +93,8 @@ Python is a dynamically typed language, and the type can be dynamically changed 
 
 ## Strings
 
+Strings are an indexed squence of characters, with individual characters accessible using an index operator, i.e., **str\[i\]**.
+
 ### Multiline Strings
 
 ```python
@@ -107,8 +109,18 @@ print(str)
 ### String Concatenation
 
 ```python
+str1 = "5"
+str2 = "3"
 newStr = str1 + str2
+print(newStr)
+>53
+
+# to convert to number, so these can be numerically added instead of concatenated:
+newNum = int(str1) + int(str2)
+print(newNum)
+>8
 ```
+Note how Python always concatenates numeric strings, not as in some languages which would have converted these to numbers implicitly and added them for a result of 8.
 
 ### Using Slice on Strings
 
@@ -141,6 +153,25 @@ TODO - Placeholder
 TODO - Placeholder
 
 # Input / Output
+
+## Standard Input
+
+```python
+import sys
+
+# without a newline stdout needs to be flused before the input
+# also true if print("...", end="") was used instead
+sys.stdout.write("Enter your name: ")
+sys.stdout.flush()
+
+# using readline for input, strip off the newline
+name = sys.stdin.readline().rstrip('\n')
+
+# using input (combines prompt and stdio read)
+age = input("How old are you? ")
+
+print("Hello, {}.  You are {} year's old".format(name, age));
+```
 
 ## Print Basic
 
@@ -209,7 +240,7 @@ print("{:10.3e}".format(1234567.89)) # display in scientific notation
 
 ### Using the older % option
 
-Not as many options, for example, no comma thousand seperators.
+From Python2, but still works in Python3. Not as many options, for example, no numeric comma thousand seperators.
 
 ```python
 print("The correct answer is %d" % (42))
