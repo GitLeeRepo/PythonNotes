@@ -230,6 +230,84 @@ print(first_name, last_name, phone)
 print(single) # tuple with one element
 ```
 
+## Sets
+
+Sets contain an **unorder** collection of **unique** objects.  They are created with the **set()** function.  **Sets** cannot be indexed like **lists** and **tuples**.
+
+Sets support this standard set of operations
+
+* **Union** - set1 | set2
+* **Intersection** - set1 & set2
+* **difference** - set1 - set2
+* **symetric difference** - set1 ^ set2
+
+### Set Examples
+
+```python
+import sys
+
+set1 = set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+set2 = set([1, 3, 5, 7, 9])
+set3 = set([2, 4, 6, 8, 10])
+dupeslist = [1, 2, 5, 2, 3, 1]
+nodupes = set(dupeslist)
+
+# the sets to compare
+print("set1:", set1)
+print("set2:", set2)
+print("set3:", set3)
+
+# union operations
+print("union set1 | set2:", set1 | set2)
+print("union set1 | set3:", set2 | set3)
+print("union set2 | set3:", set2 | set3)
+
+# intersection operations
+print("intersection set1 & set2:", set1 & set2)
+print("intersection set1 & set3:", set1 & set3)
+print("intersection set2 & set3:", set2 & set3)
+
+# difference operations
+print("difference set1 - set2:", set1 - set2)
+print("difference set1 - set3:", set1 - set3)
+print("difference set2 - set3:", set2 - set3)
+
+# symetric difference operations
+print("symetric difference set1 ^ set2", set1 ^ set2)
+print("symetric difference set1 ^ set3", set1 ^ set3)
+print("symetric difference set2 ^ set3", set2 ^ set3)
+
+# duplicates not allowed and are automatically removed
+print("duplicates automatically removed:", nodupes, "from", dupeslist)
+
+nodupes.add(4)
+nodupes.update([6, 7, 8])
+nodupes.remove(1)
+print("nodupes after adding (4), updating [6, 7, 8], and removing (1):", nodupes)
+```
+
+**Output:**
+
+```bash
+set1: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+set2: {1, 3, 5, 9, 7}
+set3: {8, 2, 10, 4, 6}
+union set1 | set2: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+union set1 | set3: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+union set2 | set3: {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+intersection set1 & set2: {1, 3, 5, 9, 7}
+intersection set1 & set3: {8, 2, 10, 4, 6}
+intersection set2 & set3: set()
+difference set1 - set2: {8, 2, 10, 4, 6}
+difference set1 - set3: {1, 3, 5, 9, 7}
+difference set2 - set3: {1, 3, 5, 9, 7}
+symetric difference set1 ^ set2 {2, 4, 6, 8, 10}
+symetric difference set1 ^ set3 {1, 3, 5, 7, 9}
+symetric difference set2 ^ set3 {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+duplicates automatically removed: {1, 2, 3, 5} from [1, 2, 5, 2, 3, 1]
+nodupes after adding (4), updating [6, 7, 8], and removing (1): {2, 3, 4, 5, 6, 7, 8}
+```
+
 # Operators and Expressions
 
 * **+** - addition
