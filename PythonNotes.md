@@ -209,7 +209,7 @@ print("{:10.3e}".format(1234567.89)) # display in scientific notation
 
 ### Using the older % option
 
-Note as many options, for example, no comma thousand seperators.
+Not as many options, for example, no comma thousand seperators.
 
 ```python
 print("The correct answer is %d" % (42))
@@ -262,4 +262,21 @@ number    | the number of characters, space fill as needed
 
 # File Handling
 
-TODO - Placeholder
+```python
+import sys
+
+fr = open("file_ex1.py")      # open for read
+fw1 = open("out1.txt", "w")   # open for write
+fw2 = open("out2.txt", "w")   # open for write
+
+line = fr.readline()
+while line:
+    print(line, end="")             # stdout - remove the newline character to avoid extra line
+    fw1.write(line)                 # write to filei, no extra newline (only from read)
+    print(line, file=fw2, end="")   # also writes to file, extra newline must be removed
+    line = fr.readline()
+
+fr.close()
+fw1.close()
+fw2.close()
+```
