@@ -75,7 +75,7 @@ main()
 # Types and Objects
 
 
-* Numbers - includes both integer and floating point
+* Numbers (immutable) - includes both integer and floating point
 * Sequences
   * Strings (immutable)
   * Tuples (immutable)
@@ -90,7 +90,13 @@ main()
 
 # Operators and Expressions
 
-TODO - Placeholder
+* **+** - addition
+* **-** - subtraction
+* **\*** - multiplication
+* **/** - division
+* **//** - integer division (drops the remainder)
+* **%** - modulus
+* **\*\*** - exponent
 
 # Functions
 
