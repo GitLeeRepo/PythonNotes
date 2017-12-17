@@ -34,11 +34,11 @@ TODO - Placeholder
 ## Basic Python File Structure
 
 Note these points in the following program
-* Specifying where the Python3 interpretter can be found (**#!/usr/bin/python3** on Ubuntu)
-* **import** directives for brining in external code (in this case the built-in **sys** module
+* Specifying where the Python3 interpreter can be found (**#!/usr/bin/python3** on Ubuntu)
+* **import** directives for bringing in external code (in this case the built-in **sys** module
 * Multiline comments with the **triple opening and closing apostrophe's**
 * Single line comments with **#**
-* Functon definitions, ex., **def displayMsg(msg):**
+* Function definitions, ex., **def displaymsg(msg):**
 * Python's use of indentation to define blocks of code for functions, loops, and conditional statements
 * The processing of command line arguments
 * The use of the imported modules methods and properties (**sys.argv** in this case)
@@ -94,11 +94,11 @@ Python is a dynamically typed language, and the type can be dynamically changed 
 
 ## Strings
 
-Strings are an indexed squence of characters, with individual characters accessible using an index operator, i.e., **str\[i\]**.
+Strings are an indexed sequence of characters, with individual characters accessible using an index operator, i.e., **str\[i\]**.
 
 ### String Quoting
 
-Strings can be either single, or double quoted, both of which are generally acceptable as long as their use is consistent.  When a string contaains a single quote within it, you can use double quotes to avoid having to escape it with a backslash, with the same being true of double quotes within single quotes.
+Strings can be either single, or double quoted, both of which are generally acceptable as long as their use is consistent.  When a string contains a single quote within it, you can use double quotes to avoid having to escape it with a backslash, with the same being true of double quotes within single quotes.
 
 ### Multiline Strings (triple quotes)
 
@@ -147,7 +147,7 @@ Note the following in the list below:
 * Lists can be appended to (they are mutable) **empty.append()**
 * You can create references to lists, in which two variables point to the same list
 * You can make copies of lists
-* You can contcatenate lists creating a combined list
+* You can concatenate lists creating a combined list
 * You can print the entire list with one print (no loops), subsets (through slicing) or individual elements through indexing
 * Lists can be created from splitting strings based on a delimiter
 
@@ -213,7 +213,7 @@ print(empty[3][1])  # prints an individual item from the nested list
 * They are declared with parenthesis rather than square brackets
 * They are intended to be used as a whole object made up of parts, not as in a collection of distinct objects as in a list
 * They can be assigned to multiple variables in one operation **first_name, last_name, phone = person**
-* For a large number of small sequences, tuples are generally more memory efficient than lists.  This is because tuples are immutable, while lists are mutible, and therefore the interpretter tends to overallocate for lists in anticipation that they will be expanded.
+* For a large number of small sequences, tuples are generally more memory efficient than lists.  This is because tuples are immutable, while lists are mutable, and therefore the interpreter tends to over allocate for lists in anticipation that they will be expanded.
 
 ```python
 import sys
@@ -232,14 +232,14 @@ print(single) # tuple with one element
 
 ## Sets
 
-Sets contain an **unorder** collection of **unique** objects.  They are created with the **set()** function.  **Sets** cannot be indexed like **lists** and **tuples**.
+Sets contain an **unordered** collection of **unique** objects.  They are created with the **set()** function.  **Sets** cannot be indexed like **lists** and **tuples**.
 
 Sets support this standard set of operations
 
 * **Union** - set1 | set2
 * **Intersection** - set1 & set2
 * **difference** - set1 - set2
-* **symetric difference** - set1 ^ set2
+* **symmetric difference** - set1 ^ set2
 
 ### Set Examples
 
@@ -272,10 +272,10 @@ print("difference set1 - set2:", set1 - set2)
 print("difference set1 - set3:", set1 - set3)
 print("difference set2 - set3:", set2 - set3)
 
-# symetric difference operations
-print("symetric difference set1 ^ set2", set1 ^ set2)
-print("symetric difference set1 ^ set3", set1 ^ set3)
-print("symetric difference set2 ^ set3", set2 ^ set3)
+# symmetric difference operations
+print("symmetric difference set1 ^ set2", set1 ^ set2)
+print("symmetric difference set1 ^ set3", set1 ^ set3)
+print("symmetric difference set2 ^ set3", set2 ^ set3)
 
 # duplicates not allowed and are automatically removed
 print("duplicates automatically removed:", nodupes, "from", dupeslist)
@@ -301,9 +301,9 @@ intersection set2 & set3: set()
 difference set1 - set2: {8, 2, 10, 4, 6}
 difference set1 - set3: {1, 3, 5, 9, 7}
 difference set2 - set3: {1, 3, 5, 9, 7}
-symetric difference set1 ^ set2 {2, 4, 6, 8, 10}
-symetric difference set1 ^ set3 {1, 3, 5, 7, 9}
-symetric difference set2 ^ set3 {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+symmetric difference set1 ^ set2 {2, 4, 6, 8, 10}
+symmetric difference set1 ^ set3 {1, 3, 5, 7, 9}
+symmetric difference set2 ^ set3 {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 duplicates automatically removed: {1, 2, 3, 5} from [1, 2, 5, 2, 3, 1]
 nodupes after adding (4), updating [6, 7, 8], and removing (1): {2, 3, 4, 5, 6, 7, 8}
 ```
@@ -330,7 +330,7 @@ for item in items:
     print(item, items[item])
 
 
-# a couple of ways to add to dictonary
+# a couple of ways to add to dictionary
 items["item6"] = 7.57
 items.update({"item7" : 3.33})
 
@@ -377,7 +377,7 @@ TODO - Placeholder
 ```python
 import sys
 
-# without a newline stdout needs to be flused before the input
+# without a newline stdout needs to be flushed before the input
 # also true if print("...", end="") was used instead
 sys.stdout.write("Enter your name: ")
 sys.stdout.flush()
@@ -458,7 +458,7 @@ print("{:10.3e}".format(1234567.89)) # display in scientific notation
 
 ### Using the older % option
 
-From Python2, but still works in Python3. Not as many options, for example, no numeric comma thousand seperators.
+From Python2, but still works in Python3. Not as many options, for example, no numeric comma thousand separators.
 
 ```python
 print("The correct answer is %d" % (42))
@@ -486,7 +486,7 @@ print("{:10.3e}".format(1234567.89)) # display in scientific notation
 #> 1.235e+06
 ```
 
-### Format Specfiers
+### Format Specifiers
 
 Specifier | Description
 ----------|-----------------------------------------------------------------------------
@@ -501,7 +501,7 @@ E         | Floating point exponential format (uppercase)
 f         | Floating point decimal format
 F         | Floating point decimal format
 g         | Depends on size, either decimal or exponential format (lowercase)
-G	      | Depends on size, either decimal or exponential format (luppercase)
+G	      | Depends on size, either decimal or exponential format (uppercase)
 c         | Single character (integer or ASCII character).
 r         | String (converts any python object using repr()).
 s         | String (converts any python object using str()).
@@ -521,7 +521,7 @@ fw2 = open("out2.txt", "w")   # open for write
 line = fr.readline()
 while line:
     print(line, end="")             # stdout - remove the newline character to avoid extra line
-    fw1.write(line)                 # write to filei, no extra newline (only from read)
+    fw1.write(line)                 # write to file, no extra newline (only from read)
     print(line, file=fw2, end="")   # also writes to file, extra newline must be removed
     line = fr.readline()
 
