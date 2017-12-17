@@ -57,7 +57,7 @@ Note these points in the following program
 import sys
 
 # function
-def displayMsg(msg):
+def displaymsg(msg):
     print(msg)
 
 # main function
@@ -65,9 +65,9 @@ def main():
     # if command line args then display each one
     if len(sys.argv) > 1:
         for arg in sys.argv:
-            displayMsg(arg)
+            displaymsg(arg)
     else:
-        displayMsg("Hello, world")
+        displaymsg("Hello, world")
 
 # start here
 main()
@@ -112,13 +112,13 @@ print(str)
 ```python
 str1 = "5"
 str2 = "3"
-newStr = str1 + str2
-print(newStr)
+newstr = str1 + str2
+print(newstr)
 >53
 
 # to convert to number, so these can be numerically added instead of concatenated:
-newNum = int(str1) + int(str2)
-print(newNum)
+newnum = int(str1) + int(str2)
+print(newnum)
 >8
 ```
 Note how Python always concatenates numeric strings, not as in some languages which would have converted these to numbers implicitly and added them for a result of 8.
@@ -161,8 +161,8 @@ print(food[4:])   # print [ 'corn' ]
 
 # concatenate lists, creates a new list
 
-shoppingList = food + items
-print(shoppingList)
+shoppinglist = food + items
+print(shoppinglist)
 
 # mixed strings and numbers
 print(mixed)
