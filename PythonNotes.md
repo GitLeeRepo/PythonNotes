@@ -108,7 +108,70 @@ TODO - Placeholder
 
 # Input / Output
 
-TODO - Placeholder
+## Print Basic
+
+```python
+print("Hello, world")
+>Hello, world
+print("Hello,", "world") # concatenates with a space in between
+>Hello, world"
+print("Hello,""world") # concatenates without a space in between
+>Hello,world"
+
+print(25*4)
+>100
+```
+
+## Print Format
+
+```python
+print("The correct answer is {0:d}".format(42))
+>The correct answer is 42
+print("{} {}".format("one", "two"))
+>one two
+print("{1} {0}".format("one", "two"))
+>two one
+print("{:>10}".format("right")) # right justify within 10 space
+>     right
+print("{:10}{:>10}".format("left", "right")) # pad both left and right justifies with 10 (total width 20 chars)
+>left           right
+print(":^10".format("Test")) # center "test" within 10 characters 
+>   Test
+print("{:5d}".format(42)) # integer right justified with total 5 characters (3 space on front)
+>   42
+print("{:6.3f}".format(42.987654321)) # rounds to 3 decimals, occupies 6 total (incl decimal) so no indent
+>42.988
+print("{:9.3f}".format(42.987654321)) # rounds to 3 decimals, occupies 9 total (incl decimal) so 3 space indent
+>   42.988
+print("{:15,.2f}".format(-1234567.89)) # display with commas, 2 decimals, and sign (implicit)
+>  -1,234,567.89
+print("{:+15,.2f}".format(1234567.89)) # display with commas, 2 decimals, and sign (explicit)
+>  +1,234,567.89
+
+```
+
+### Format Specfiers
+
+Specifier | Description
+----------|-----------------------------------------------------------------------------
+d         | Signed integer
+i         | Signed integer
+o         | Unsigned octal
+u         | Unsigned integer
+x         | Unsigned hexadecimal (lowercase)
+X         | Unsigned hexadecimal (uppercase)
+e         | Floating point exponential format (lowercase)
+E         | Floating point exponential format (uppercase)
+f         | Floating point decimal format
+F         | Floating point decimal format
+g         | Depends on size, either decimal or exponential format (lowercase)
+G	      | Depends on size, either decimal or exponential format (luppercase)
+c         | Single character (integer or ASCII character).
+r         | String (converts any python object using repr()).
+s         | String (converts any python object using str()).
+,         | include commas (thousand separator) in number
+.         | include decimal in floating point numbers
+number    | the number of characters, space fill as needed
 
 # File Handling
 
