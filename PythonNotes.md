@@ -74,7 +74,19 @@ main()
 
 # Types and Objects
 
-TODO - Placeholder
+
+* Numbers - includes both integer and floating point
+* Sequences
+  * Strings (immutable)
+  * Tuples (immutable)
+  * Bytes (immutable)
+  * Lists (mutable)
+  * Byte Arrays (mutable)
+* Sets (immutable)
+* Maps
+  * Dictionaries (mutable)
+* Callable - callable as functions
+* Class Objects
 
 # Operators and Expressions
 
