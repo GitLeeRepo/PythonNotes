@@ -5,6 +5,7 @@ Notes on the Python3 programming language, examples use Python3 syntax, not Pyth
 # References
 
 * [Python 3.5.4 Documentation](https://docs.python.org/3.5/)
+* [Python Style Guide](https://www.python.org/dev/peps/pep-0008/#naming-conventions) - naming conventions, etc.
 
 ## Books
 
@@ -132,6 +133,70 @@ print (s[:5]) #Hello -  first 5 chars
 print (s[6:-1]) #World - start after 6 to 1 less than end of string
 print (s[1:8]) #ello wo - start after 1 through 8
 print (s[1:-4]) #ello wo - same result indexing from right
+```
+
+## Lists
+
+```python
+import sys
+
+food = [ 'cereal', 'cheese', 'nuts', 'milk', 'corn' ]
+items = [ 'paper', 'soap', 'cleaner' ]
+mixed = [ 'one', 1, 'two', 2, 'three', 3 ]
+
+# print all elements
+print(food)
+print(food[:])
+print(food[0:])
+print(food[0:9])
+
+# print one element at a time
+print(food[3], "and", food[0])
+#>milk can cereal
+
+# print a range of elements
+print(food[0:4])  # print the first 4 elements
+print(food[0:-1]) # print all but the last element
+print(food[4:])   # print [ 'corn' ]
+
+# concatenate lists, creates a new list
+
+shoppingList = food + items
+print(shoppingList)
+
+# mixed strings and numbers
+print(mixed)
+
+# list pointer vs list copy
+strptr = mixed     # both point to the same list
+strcpy = mixed[:]  # two different copies of the list
+mixed[0] = "uno"   # change the original
+print(strptr)      # pointer version has the change
+print(strcpy)      # the copied version does not have the change
+```
+
+## Tuples
+
+**Tuples** are similar to lists (indexing, slicing, concatenation), but are different is several ways.
+
+* They are **immutable**, they can't be changed.  If you want to change it a new version must be created.
+* They are declared with parenthesis rather than square brackets
+* They are intended to be used as a whole object made up of parts, not as in a collection of distinct objects as in a list
+* They can be assigned to multiple variables in one operation **first_name, last_name, phone = person**
+
+```python
+import sys
+
+person = ( 'Bill', 'Jones', '(999)999-9999' )
+
+# assign to individual variables
+first_name, last_name, phone = person
+
+print(person)
+#> ('Bill', 'Jones', '(999)999-9999')
+
+print(first_name, last_name, phone)
+#> Bill Jones (999)999-9999
 ```
 
 # Operators and Expressions
