@@ -414,7 +414,7 @@ while len(s) > 0:
 def displaymsg(msg="test"):
     print(msg)
 
-# function with parameter (no defalt)
+# function with parameter (no default)
 def displaymsg_nolf(msg):
     print(msg, "", end="")
 
@@ -462,7 +462,7 @@ main()
 
 ## Generator Functions
 
-Generator functions can be used to geneate sequences of results using **yield** and the **\_next()\_** (**next()** in Python2) method.  The **\_next()\_** method runs the **generator function** until the next **yield** is reached, which **suspends execution**. Execution is **resumed** after the **yield** when the **\_next()\_** method is called again.  The **\_next()\_** method is **implied** in the **for statement**, so it doesn't have to be explicitly provided.
+Generator functions can be used to generate sequences of results using **yield** and the **\_next()\_** (**next()** in Python2) method.  The **\_next()\_** method runs the **generator function** until the next **yield** is reached, which **suspends execution**. Execution is **resumed** after the **yield** when the **\_next()\_** method is called again.  The **\_next()\_** method is **implied** in the **for statement**, so it doesn't have to be explicitly provided.
 
 ## Generator Examples
 

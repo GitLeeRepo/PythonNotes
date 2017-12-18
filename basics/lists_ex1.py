@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-import sys
-
 food = [ 'cereal', 'cheese', 'nuts', 'milk', 'corn' ]
 items = [ 'paper', 'soap', 'cleaner' ]
 mixed = [ 'one', 1, 'two', 2, 'three', 3 ]

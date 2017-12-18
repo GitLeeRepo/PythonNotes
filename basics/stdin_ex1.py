@@ -2,7 +2,7 @@
 
 import sys
 
-# without a newline stdout needs to be flused before the input
+# without a newline stdout needs to be flushed before the input
 # also true if print("...", end="") was used instead
 sys.stdout.write("Enter your name: ")
 sys.stdout.flush()

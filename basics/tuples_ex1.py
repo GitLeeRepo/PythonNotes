@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-import sys
-
 person = ( 'Bill', 'Jones', '(999)999-9999' )
 single = ( 'justone', )  # note the trailing comma
 

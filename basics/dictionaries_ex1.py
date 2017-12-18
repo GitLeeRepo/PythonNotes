@@ -1,8 +1,5 @@
 #!/usr/bin/python3
 
-# imports
-import sys
-
 items = {
     "item1" : 5.53,
     "item2" : 9.99,
@@ -16,7 +13,7 @@ for item in items:
     print(item, items[item])
 
 
-# a couple of ways to add to dictonary
+# a couple of ways to add to dictionary
 items["item6"] = 7.57
 items.update({"item7" : 3.33})
 

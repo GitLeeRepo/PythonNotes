@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-import sys
-
 set1 = set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 set2 = set([1, 3, 5, 7, 9])
 set3 = set([2, 4, 6, 8, 10])
@@ -28,10 +26,10 @@ print("difference set1 - set2:", set1 - set2)
 print("difference set1 - set3:", set1 - set3)
 print("difference set2 - set3:", set2 - set3)
 
-# symetric difference operations
-print("symetric difference set1 ^ set2", set1 ^ set2)
-print("symetric difference set1 ^ set3", set1 ^ set3)
-print("symetric difference set2 ^ set3", set2 ^ set3)
+# symmetric difference operations
+print("symmetric difference set1 ^ set2", set1 ^ set2)
+print("symmetric difference set1 ^ set3", set1 ^ set3)
+print("symmetric difference set2 ^ set3", set2 ^ set3)
 
 # duplicates not allowed and are automatically removed
 print("duplicates automatically removed:", nodupes, "from", dupeslist)
