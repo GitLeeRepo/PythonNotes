@@ -152,8 +152,6 @@ Note the following in the list below:
 * Lists can be created from splitting strings based on a delimiter
 
 ```python
-import sys
-
 food = [ 'cereal', 'cheese', 'nuts', 'milk', 'corn' ]
 items = [ 'paper', 'soap', 'cleaner' ]
 mixed = [ 'one', 1, 'two', 2, 'three', 3 ]
@@ -216,8 +214,6 @@ print(empty[3][1])  # prints an individual item from the nested list
 * For a large number of small sequences, tuples are generally more memory efficient than lists.  This is because tuples are immutable, while lists are mutable, and therefore the interpreter tends to over allocate for lists in anticipation that they will be expanded.
 
 ```python
-import sys
-
 person = ( 'Bill', 'Jones', '(999)999-9999' )
 single = ( 'justone', )  # note the trailing comma
 
@@ -244,8 +240,6 @@ Sets support this standard set of operations
 ### Set Examples
 
 ```python
-import sys
-
 set1 = set([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 set2 = set([1, 3, 5, 7, 9])
 set3 = set([2, 4, 6, 8, 10])
@@ -315,8 +309,6 @@ A **dictionary** is an **associative array** / **hash table** that contains obje
 ### Dictionary Examples
 
 ```python
-import sys
-
 items = {
     "item1" : 5.53,
     "item2" : 9.99,
@@ -361,6 +353,46 @@ for item in items:
 * **//** - integer division (drops the remainder)
 * **%** - modulus
 * **\*\*** - exponent
+
+# Loops and Conditions
+
+## For Loop
+
+```python
+for i in range(5):
+    print("for i in range(5):", i)
+
+for i in range(1, 5):
+    print("for i in range(1, 5):", i)
+
+for c in "Hello":
+    print("Parse Hello", c)
+
+for item in ['item1', 'item2', 'item3']:
+    print("items list:", item)
+
+for tup in ('tuple1', 'tuple2', 'tuple3'):
+    print("tuples:", tup)
+
+entries = {'key1' : 'val1', 'key2' : 'val2', 'key3' : 'val3'}
+for entry in entries:
+    print("Dictionary key: {};  value: {}".format(entry, entries[entry]))
+
+input("Enter to continue")
+
+f = open("loops_ex1.py")
+for line in f:
+    print(line, end="")
+f.close()
+```
+## While Loop
+
+```python
+s = "Hello"
+while len(s) > 0:
+    print(s)
+    s = s[:-1]
+```
 
 # Functions
 
@@ -512,8 +544,6 @@ number    | the number of characters, space fill as needed
 # File Handling
 
 ```python
-import sys
-
 fr = open("file_ex1.py")      # open for read
 fw1 = open("out1.txt", "w")   # open for write
 fw2 = open("out2.txt", "w")   # open for write
