@@ -19,8 +19,7 @@ Notes on the Python3 programming language, examples use Python3 syntax, not Pyth
 
 # Concepts and Terminology
 
-* **\>** of **#\>** - in this document this is sometimes used to indicate what the output of a Python statement would be.  Refer to the **\>\>\>** notation below, which is instead meant to convey Python statements entered in the **Python shell**, in that case the output is not preceded by any symbol, just as it appears in the Python shell.
-* **\>\>\>** - as used in this document is simply the prompt as displayed in the **Python Shell**.  It precedes a Python statement, and if followed by a line without these angle brackets, that represents the output of that statement.  In some cases output may be represented with a single **\>**, typically when the preceding text is not necessarily trying to convey that it was entered in the Python shell.
+* **\>\>\>** - as used in this document is simply the prompt as displayed in the **Python Shell**.  It precedes a Python statement, and if followed by a line without these angle brackets, then these linse represents the output of that statement.  These angle brackets are not used those sections that represent the code as it appears in a script file, rather than in the interactive shell. 
 
 # Installation
 
@@ -46,9 +45,9 @@ The interactive shell is available when you type **python3** by itself on the co
 
 * **\_ (underscore)** - holds the value of the last operation, which can be assigned or used, e.g, **newvar = \_**.  This is only available in the interactive environment.
 
-# File Structure
+# Python Script Structure
 
-## Basic Python File Structure
+## Basic Python Script Structure
 
 Note these points in the following program
 * Specifying where the Python3 interpreter can be found (**#!/usr/bin/python3** on Ubuntu)
@@ -92,7 +91,7 @@ main()
 
 # Types and Objects
 
-Python is a dynamically typed language, and the type can be dynamically changed in the same scope.  The variable named principal can be assigned 14.51 (float), 12 (integer), and "Mr Smith", all in the same scope within the program.
+All data types in Python are objects, which have associated methods and properties.  Python is a dynamically typed language, and the type can be dynamically changed in the same scope.  For example, the variable named 'principal' can be assigned 14.51 (float), 12 (integer), and "Mr Smith", all in the same scope within the program, in each case a new instance is created, and the variable name references this new instance.  If the old instance doesn't have any other variable names referencing it then it will be eligible for garbage collection.
 
 ## Types
 
@@ -107,7 +106,7 @@ Python is a dynamically typed language, and the type can be dynamically changed 
 * Maps
   * Dictionaries (mutable)
 * Callable - callable as functions
-* Class Objects
+* Custom Class Objects
 
 To determine the current type of a variable you can use the **type()** function:
 
@@ -134,9 +133,9 @@ To determine the current type of a variable you can use the **type()** function:
 
 ## Numbers
 
-Integers in Python are not limitted by any particular byte size, but rather by the available memory on the computer.
+Numbers in Python are not limitted by any particular byte size, but rather by the available memory on the computer.
 
-### Conversions
+### Numeric/String Conversions
 
 To convert a string to an integer or float
 
@@ -176,27 +175,27 @@ Strings can be either single, or double quoted, both of which are generally acce
 ### Multiline Strings (triple quotes)
 
 ```python
-str = '''This is
-written on multiple lines'''
+>>> str = '''This is
+>>> written on multiple lines'''
 
-print(str)
->This is
->written on multiple lines
+>>> print(str)
+This is
+written on multiple lines
 ```
 
 ### String Concatenation
 
 ```python
-str1 = "5"
-str2 = "3"
-newstr = str1 + str2
-print(newstr)
->53
+>>> str1 = "5"
+>>> str2 = "3"
+>>> newstr = str1 + str2
+>>> print(newstr)
+53
 
 # to convert to number, so these can be numerically added instead of concatenated:
-newnum = int(str1) + int(str2)
-print(newnum)
->8
+>>> newnum = int(str1) + int(str2)
+>>> print(newnum)
+8
 ```
 Note how Python always concatenates numeric strings, not as in some languages which would have converted these to numbers implicitly and added them for a result of 8.
 
@@ -678,24 +677,24 @@ print("Hello, {}.  You are {} year's old".format(name, age));
 ## Print Basic
 
 ```python
-print("Hello, world")
->Hello, world
+>>> print("Hello, world")
+Hello, world
 
-print("Hello,", "world") # concatenates with a space in between
->Hello, world
+>>> print("Hello,", "world") # concatenates with a space in between
+Hello, world
 
-print("Hello,""world") # concatenates without a space in between
->Hello,world"
+>>> print("Hello,""world") # concatenates without a space in between
+Hello,world"
 
-print("Hello, ",end="") # print without newline
-print("world")
->Hello, world
+>>> print("Hello, ",end="") # print without newline
+>>> print("world")
+Hello, world
 
-print("=" * 50) # repeat the string 50 times
->==================================================
+>>> print("=" * 50) # repeat the string 50 times
+==================================================
 
-print(25*4)
->100
+>>> print(25*4)
+100
 ```
 
 ## Print Formatted
@@ -703,41 +702,41 @@ print(25*4)
 ### Using the newer .format() option
 
 ```python
-print("The correct answer is {0:d}".format(42))
->The correct answer is 42
+>>> print("The correct answer is {0:d}".format(42))
+The correct answer is 42
 
-print("{} {}".format("one", "two"))
->one two
+>>> print("{} {}".format("one", "two"))
+one two
 
-print("{1} {0}".format("one", "two"))
->two one
+>>> print("{1} {0}".format("one", "two"))
+two one
 
-print("{:>10}".format("right")) # right justify within 10 space
->     right
+>>> print("{:>10}".format("right")) # right justify within 10 space
+     right
 
-print("{:10}{:>10}".format("left", "right")) # pad both left and right justifies with 10 (total width 20 chars)
->left           right
+>>> print("{:10}{:>10}".format("left", "right")) # pad both left and right justifies with 10 (total width 20 chars)
+left           right
 
-print("{:^10}".format("Test")) # center "test" within 10 characters 
->   Test
+>>> print("{:^10}".format("Test")) # center "test" within 10 characters 
+   Test
 
-print("{:5d}".format(42)) # integer right justified with total 5 characters (3 space on front)
->   42
+>>> print("{:5d}".format(42)) # integer right justified with total 5 characters (3 space on front)
+   42
 
-print("{:6.3f}".format(42.987654321)) # rounds to 3 decimals, occupies 6 total (incl decimal) so no indent
->42.988
+>>> print("{:6.3f}".format(42.987654321)) # rounds to 3 decimals, occupies 6 total (incl decimal) so no indent
+42.988
 
-print("{:9.3f}".format(42.987654321)) # rounds to 3 decimals, occupies 9 total (incl decimal) so 3 space indent
->   42.988
+>>> print("{:9.3f}".format(42.987654321)) # rounds to 3 decimals, occupies 9 total (incl decimal) so 3 space indent
+   42.988
 
-print("{:15,.2f}".format(-1234567.89)) # display with commas, 2 decimals, and sign (implicit)
->  -1,234,567.89
+>>> print("{:15,.2f}".format(-1234567.89)) # display with commas, 2 decimals, and sign (implicit)
+  -1,234,567.89
 
-print("{:+15,.2f}".format(1234567.89)) # display with commas, 2 decimals, and sign (explicit)
->  +1,234,567.89
+>>> print("{:+15,.2f}".format(1234567.89)) # display with commas, 2 decimals, and sign (explicit)
+  +1,234,567.89
 
-print("{:10.3e}".format(1234567.89)) # display in scientific notation
-> 1.235e+06
+>>> print("{:10.3e}".format(1234567.89)) # display in scientific notation
+ 1.235e+06
 ```
 
 ### Using the older % option
@@ -745,29 +744,29 @@ print("{:10.3e}".format(1234567.89)) # display in scientific notation
 From Python2, but still works in Python3. Not as many options, for example, no numeric comma thousand separators.
 
 ```python
-print("The correct answer is %d" % (42))
-#>The correct answer is 42
+>>> print("The correct answer is %d" % (42))
+The correct answer is 42
 
-print("%s %s" % ("one", "two"))
-#>one two
+>>> print("%s %s" % ("one", "two"))
+one two
 
-print("%10s" % ("right")) # right justify within 10 space
-#>     right
+>>> print("%10s" % ("right")) # right justify within 10 space
+     right
 
-print("%-10s %10s" % ("left", "right")) # pad both left and right justifies with 10 (total width 20 chars)
-#>left           right
+>>> print("%-10s %10s" % ("left", "right")) # pad both left and right justifies with 10 (total width 20 chars)
+left           right
 
-print("%5d" % (42)) # integer right justified with total 5 characters (3 space on front)
-#>   42
+>>> print("%5d" % (42)) # integer right justified with total 5 characters (3 space on front)
+   42
 
-print("%6.3f" % (42.987654321)) # rounds to 3 decimals, occupies 6 total (incl decimal) so no indent
-#>42.988
+>>> print("%6.3f" % (42.987654321)) # rounds to 3 decimals, occupies 6 total (incl decimal) so no indent
+42.988
 
-print("%9.3f" % (42.987654321)) # rounds to 3 decimals, occupies 9 total (incl decimal) so 3 space indent
-#>   42.988
+>>> print("%9.3f" % (42.987654321)) # rounds to 3 decimals, occupies 9 total (incl decimal) so 3 space indent
+   42.988
 
-print("{:10.3e}".format(1234567.89)) # display in scientific notation
-#> 1.235e+06
+>>> print("{:10.3e}".format(1234567.89)) # display in scientific notation
+ 1.235e+06
 ```
 
 ### Format Specifiers
