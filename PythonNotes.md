@@ -27,6 +27,16 @@ TODO - Placeholder
 
 # IDLE Interactive Environment
 
+## Command line
+
+* **-i scriptname.py** - loads a runs the script inside the interfactive environment.
+
+## Internal Prompt >>>
+
+* **help()** - places you into the help subsystem where you can enter help commands.  Type quite to return to the Python interpretter.
+* **help(\<object\>)** - loads help on the specified module (if it has been loaded with import) or other built-in function in a man page like interace.  Type "q" to quit.
+* **dir(<module>)** - shows the properties and methods of a loaded module, for example, **dir(sys)** (after first typing **import sys**)
+
 * **\_ (underscore)** - holds the value of the last operation, which can be assigned or used, e.g, **newvar = \_**.  This is only available in the interactive environment.
 
 # File Structure
