@@ -409,7 +409,112 @@ while len(s) > 0:
 
 # Functions
 
-TODO - Placeholder
+```python
+# function with default parameter
+def displaymsg(msg="test"):
+    print(msg)
+
+# function with parameter (no defalt)
+def displaymsg_nolf(msg):
+    print(msg, "", end="")
+
+# recursive function
+def recurse(count):
+    if count == 6:
+        displaymsg("\nReverse")
+        return
+
+    displaymsg_nolf(count)
+    recurse(count+1)
+    displaymsg_nolf(count)
+    if count == 1:
+        displaymsg("\nDone")
+
+# returns a single value
+def remainder(x, y):
+    q = x // y  # integer division with truncate
+    r = x - (q * y)
+    return r
+
+# returns multiple values using a tuple
+def divide(x, y):
+    q = x // y  # integer division with truncate
+    r = x - (q * y)
+    return (q, r)
+
+# main function
+def main():
+    displaymsg()
+    displaymsg("Begin Recursion")
+
+    recurse(1)
+
+    print("remainder(5, 2): 5 / 2 has a remainder of", remainder(5, 2))
+    quotient, remain = divide(5, 2) # assign tuple return values
+    print("divide(5,2): 5 / 2 has a quotient of {} and a remainder of {}".format(quotient, remain))
+
+    # when using named parameters, order doesn't matter
+    print("remainder(y=2, x=5): 5 / 2 has a remainder of", remainder(y=2, x=5))
+
+# start here
+main()
+```
+
+## Generator Functions
+
+Generator functions can be used to geneate sequences of results using **yield** and the **\_next()\_** (**next()** in Python2) method.  The **\_next()\_** method runs the **generator function** until the next **yield** is reached, which **suspends execution**. Execution is **resumed** after the **yield** when the **\_next()\_** method is called again.  The **\_next()\_** method is **implied** in the **for statement**, so it doesn't have to be explicitly provided.
+
+## Generator Examples
+
+```python
+# examples from Python-Essential-Reference-Developers-Library by David Beazley
+# with revisions by TK
+
+import time
+
+# returns multiple values using a tuple
+def countdown(n):
+    print("generator function counting down")
+    while n > 0:
+        yield n
+        n -= 1
+
+# unix like tail function
+def tail(f):
+    f.seek(0, 2)  # move to EOF
+    while True:
+        line = f.readline()
+        if not line:
+            time.sleep(0.1)
+            continue
+        yield line
+
+def grep(lines, searchtext):
+    for line in lines:
+        if searchtext in line:
+            yield line
+
+# main function
+def main():
+    for i in countdown(20):
+        print(i, "", end="")
+    print("")
+
+    print("\nNext this tails input1.txt, displaying output when 'test' is added.")
+    print("Either run this program in the background and then run")
+    print("'echo test >> input1.txt' in the foreground or append to this")
+    print("file from another terminal.  Append 'end test' to terminate")
+    tailed = tail(open("input1.txt"))
+    grepped = grep(tailed, "test")
+
+    for line in grepped:
+        print(line, end="")
+        if "end" in line:
+            break
+
+# start here
+main()
+```
 
 # Classes / Object Oriented Programming
 
