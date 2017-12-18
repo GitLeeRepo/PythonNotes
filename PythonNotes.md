@@ -19,7 +19,7 @@ Notes on the Python3 programming language, examples use Python3 syntax, not Pyth
 
 # Concepts and Terminology
 
-* **\>\>\>** - as used in this document is simply the prompt as displayed in the **Python Shell**.  It precedes a Python statement, and if followed by a line without these angle brackets, then these linse represents the output of that statement.  These angle brackets are not used those sections that represent the code as it appears in a script file, rather than in the interactive shell. 
+* **\>\>\>** - as used in this document is simply the prompt as displayed in the **Python Shell**.  It precedes a Python statement, and if followed by a line without these angle brackets, then these linse represents the output of that statement.  These angle brackets are not used for those sections that represent the code as it appears in a script file, rather than in the interactive shell. 
 
 # Installation
 
@@ -130,6 +130,47 @@ To determine the current type of a variable you can use the **type()** function:
 >>> type (d)
 <class 'dict'>
 ```
+
+The **is operator** can be used to determine if two variable names are pointing to the same object, for example:
+
+```python
+>>> a = [1, 2, 3, "four"]
+>>> b = [1, 2, 3, "four"]
+>>> a is b
+False
+>>> a=b
+>>> a is b
+True
+```
+
+Note there can be some inconsitencies when comparing basic data types using **is**, for example:
+
+```python
+>>> s1 = "This is a test"
+>>> s2 = "This is a test"
+>>> s1 is s2
+False
+>>> s1 = "test"
+>>> s2 = "test"
+>>> s1 is s2
+True
+```
+For the shorter version, Python appears to try to optimize things by having them point to the same underlying object (even though they were asssigned separately).  In these cases it is better to compare values using the **== equality** operator.
+
+The **is operator** can be used to compare to Python's **None**, which is the equivellent of **null** in other languages
+
+```python
+>>> s1="Hello"
+>>> s2=None
+>>> s3=""
+>>> s1 is None
+False
+>>> s2 is None
+True
+>>> s3 is None
+False
+```
+Note that an empty string is not considered **None**
 
 ## Numbers
 
