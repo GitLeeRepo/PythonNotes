@@ -19,13 +19,20 @@ Notes on the Python3 programming language, examples use Python3 syntax, not Pyth
 
 # Concepts and Terminology
 
-TODO - Placeholder
+* **\>** of **#\>** - in this document this is sometimes used to indicate what the output of a Python statement would be.  Refer to the **\>\>\>** notation below, which is instead meant to convey Python statements entered in the **Python shell**, in that case the output is not preceded by any symbol, just as it appears in the Python shell.
+* **\>\>\>** - as used in this document is simply the prompt as displayed in the **Python Shell**.  It precedes a Python statement, and if followed by a line without these angle brackets, that represents the output of that statement.  In some cases output may be represented with a single **\>**, typically when the preceding text is not necessarily trying to convey that it was entered in the Python shell.
 
 # Installation
 
-TODO - Placeholder
+For Ubuntu:
 
-# IDLE Interactive Environment
+```bash
+sudo apt install python3
+```
+
+# Python Shell
+
+The interactive shell is available when you type **python3** by itself on the command line, or **python3 -i scriptname.py** to load a script into the interactive shell.
 
 ## Command line
 
@@ -101,6 +108,62 @@ Python is a dynamically typed language, and the type can be dynamically changed 
   * Dictionaries (mutable)
 * Callable - callable as functions
 * Class Objects
+
+To determine the current type of a variable you can use the **type()** function:
+
+```python
+>>> s="Hello"
+>>> type(s)
+<class 'str'>
+>>> f=4.54
+>>> type(f)
+<class 'float'>
+>>> i=34
+>>> type(i)
+<class 'int'>
+>>> l = [ 1, 2, 3]
+>>> type(l)
+<class 'list'>
+>>> t = (4, 5, 6)
+>>> type(t)
+<class 'tuple'>
+>>> d = { 'one' : 1, 'two' : 2 }
+>>> type (d)
+<class 'dict'>
+```
+
+## Numbers
+
+Integers in Python are not limitted by any particular byte size, but rather by the available memory on the computer.
+
+### Conversions
+
+To convert a string to an integer or float
+
+```python
+>>> int("45")
+45
+>>> float("2.345")
+2.345
+>>> float("3e+19")
+3e+19
+>>> float("3e+19") + float("2e+18")
+3.2e+19
+```
+
+To convert an integer or float to a string:
+
+```python
+>>> str("99")
+'99'
+>>> str("45.345")
+'45.345'
+>>> str("2e+19")
+'2e+19'
+>>> s = str("2e+19")
+>>> float(s)  # convert the string variable back to a float
+2e+19
+```
 
 ## Strings
 
