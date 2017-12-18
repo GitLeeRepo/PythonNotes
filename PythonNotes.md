@@ -467,7 +467,33 @@ for item in items:
 * **%** - modulus
 * **\*\*** - exponent
 
-# Loops and Conditions
+# Conditions
+
+## Conditional Operator Chaining
+
+Operator can be chained in Python, so to express that 5 is greater than 4 and less than 7, or that it is not greater than for and greater than 7, you can express it like this:
+
+```python
+>>> a=5
+>>> 4 < a < 7
+True
+>>> 4 < a > 7
+False
+```
+
+## Using pass in conditions
+
+If you don't want to do anything on a particular branch of a condition you can use **pass** to do nothing,
+
+```python
+if a > b:
+    pass
+else:
+    print("b > a")
+    
+```
+
+# Loops
 
 ## For Loop
 
@@ -851,3 +877,17 @@ fr.close()
 fw1.close()
 fw2.close()
 ```
+
+# Exceptions
+
+```python
+num = input("Input an integer, or for an exception don't: ")
+
+try:
+    i = int(num)
+    print("{} is a valid integer".format(i))
+except ValueError as err:
+    print(err)
+```
+Note this will generate an error when entering a floating point number, in addition to a string or other non-integer data type.
+
