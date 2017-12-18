@@ -530,11 +530,11 @@ main()
 
 Description from [python.org docs](https://docs.python.org/3/library/asyncio-task.html#asyncio.coroutine):
 
-    Coroutines used with asyncio may be implemented using the async def statement, or by using generators. The async def type of coroutine was added in Python 3.5, and is recommended if there is no need to support older Python versions.
+  Coroutines used with asyncio may be implemented using the async def statement, or by using generators. The async def type of coroutine was added in Python 3.5, and is recommended if there is no need to support older Python versions.
 
-    Generator-based coroutines should be decorated with @asyncio.coroutine, although this is not strictly enforced. The decorator enables compatibility with async def coroutines, and also serves as documentation. Generator-based coroutines use the yield from syntax introduced in PEP 380, instead of the original yield syntax.
+Generator-based coroutines should be decorated with @asyncio.coroutine, although this is not strictly enforced. The decorator enables compatibility with async def coroutines, and also serves as documentation. Generator-based coroutines use the yield from syntax introduced in PEP 380, instead of the original yield syntax.
     
-    Calling a coroutine does not start its code running – the coroutine object returned by the call doesn’t do anything until you schedule its execution.
+Calling a coroutine does not start its code running – the coroutine object returned by the call doesn’t do anything until you schedule its execution.
   
 A coroutine's execution is suspended unti a future event occurs.
 
