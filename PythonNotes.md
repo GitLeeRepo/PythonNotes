@@ -484,10 +484,34 @@ for item in items:
 * **+** - addition
 * **-** - subtraction
 * **\*** - multiplication
-* **/** - division
+* **/** - float division
 * **//** - integer division (drops the remainder)
 * **%** - modulus
 * **\*\*** - exponent
+* **=** - assignment
+* **+=** - add the right side to the left side, store in variable on left
+* **-=** - subtract the right side from the left side, store in variable on left
+* **\*=** - multiply the right side by the left side, store in variable on left
+* **/=** - divide (float) the left side into from the right side, store in variable on left
+* **//=** - divide (integer) the left side into from the right side, store in variable on left
+* **in** - membership operator (for example, **item in list**, or **char in str**)
+* **and** - and logical operator
+* **or** - or logical operator
+* **not** - not logical operator
+
+Note **xor** is not included as an operator, but you can use the **xor()** function in the **operators** module
+
+```python
+>>> from operator import xor
+>>> xor(True, False)
+True
+>>> xor(False, False)
+False
+>>> xor(False, True)
+True
+>>> xor(True, True)
+False
+```
 
 # Conditions
 
@@ -503,6 +527,19 @@ True
 False
 ```
 
+## if / eleif / else
+
+```python
+if a > b:
+    print ("a > b")
+elif a < b:
+    printf("a < b")
+elif a == b:
+    printf("a == b")
+else:
+    printf("Now that's interesting")
+```
+
 ## Using pass in conditions
 
 If you don't want to do anything on a particular branch of a condition you can use **pass** to do nothing,
@@ -516,6 +553,8 @@ else:
 ```
 
 # Loops
+
+Note that both **for** and **while** loops support **break** to break out of the loop, and **continue** to jump back to the top of the loop.
 
 ## For Loop
 
