@@ -50,3 +50,22 @@ print(empty)        # prints all list items, including nested list
 print(empty[3])     # prints the nested list only
 print(empty[3][1])  # prints an individual item from the nested list
 
+# insert to a specific positions in list
+empty.insert(1, "new pos 1")
+print(empty)
+
+# remove what was just added
+empty.remove("new pos 1")
+print(empty)
+
+# sort the list
+food.sort()
+print("sorted:", food)
+
+# pop the last item from the list (in this case a nested list)
+x = empty.pop()
+print(x, "has been popped from", empty)
+
+# clear the list completely
+empty.clear()
+print(empty, "Empty again")

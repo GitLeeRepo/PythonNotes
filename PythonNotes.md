@@ -252,7 +252,7 @@ To convert an integer or float to a string:
 
 The **decimal.Decimal** numeric type is import from the **decimal** module and is used to represent large numbers that contain decimal points (such as in financial transactions) accurately, which is not possible with standard float because of precision issues.  It is however a slower data type to work with than is a standard float.
 
-Note do NOT try too convert a float to a decimal with decimal.Decimal(1234567.8901) since this will then be just as inprecise as a float (this includes float literals).  Instead either convert from an integer or string representation.
+Note do NOT try too convert a float to a decimal with decimal.Decimal(1234567.8901) since this will then be just as imprecise as a float (this includes float literals).  Instead either convert from an integer or string representation.
 
 **Example:**
 
@@ -274,7 +274,7 @@ locale.setlocale(locale.LC_ALL, "en_US.UTF-8")
 # note: locale.setlocale(locale.LC_ALL, "") will set it to system default
 
 # note the use of string conversion, if this was converted from a float
-# it would inherit the floats inprecision, you should either convert from
+# it would inherit the floats imprecision, you should either convert from
 # a string or an integer, never use a float (including a float literal).
 dec1 = Decimal('12345678901234567890123456789012345678901234567890.99')
 dec2 = Decimal('0.02')
@@ -657,7 +657,7 @@ True
 False
 ```
 
-## if / eleif / else
+## if / elif / else
 
 ```python
 if a > b:
@@ -1068,7 +1068,7 @@ f         | Floating point decimal format
 F         | Floating point decimal format
 g         | Depends on size, either decimal or exponential format (lowercase)
 G	      | Depends on size, either decimal or exponential format (uppercase)
-n         | Use locale stettings for thousand sep and decimal (int, float, decimal)
+n         | Use locale settings for thousand sep and decimal (int, float, decimal)
 c         | Single character (integer or ASCII character).
 r         | String (converts any python object using repr()).
 s         | String (converts any python object using str()).
@@ -1089,7 +1089,7 @@ locale.setlocale(locale.LC_ALL, "en_US.UTF-8")
 # Use the system locale (based on environment variable):
 locale.setlocale(locale.LC_ALL, "")
 
-# Reset to the defaul (no thousand separator)
+# Reset to the default (no thousand separator)
 locale.setlocale(locale.LC_ALL, "C")
 ```
 
