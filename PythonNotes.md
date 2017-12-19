@@ -230,6 +230,44 @@ To convert an integer or float to a string:
 2e+19
 ```
 
+### decimal.Decimal Numeric type
+
+The **decimal.Decimal** numeric type is import from the **decimal** module and is used to represent large numbers that contain decimal points (such as in financial transactions) accurately, which is not possible with standard float because of precision issues.  It is however a slower data type to work with than is a standard float.
+
+Note do NOT try too convert a float to a decimal with decimal.Decimal(1234567.8901) since this will then be just as inprecise as a float (this includes float literals).  Instead either convert from an integer or string representation.
+
+**Example:**
+
+```python
+from decimal import *
+import locale
+
+# print the current context setting such as rounding and precision
+print(getcontext())
+# change the precision from the default 28 to 53
+getcontext().prec=53
+print("After changing precision:")
+print(getcontext())
+print("")
+
+# setting locale will print thousands separator (us: comma) and local
+# decimal point when used with 'n' format specifier in print function
+locale.setlocale(locale.LC_ALL, "en_US.UTF-8")
+# note: locale.setlocale(locale.LC_ALL, "") will set it to system default
+
+# note the use of string conversion, if this was converted from a float
+# it would inherit the floats inprecision, you should either convert from
+# a string or an integer, never use a float (including a float literal).
+dec1 = Decimal('12345678901234567890123456789012345678901234567890.99')
+dec2 = Decimal('0.02')
+dec3 = dec1 + dec2
+print("Decimals with precision=53 {:n} + {:n} = {:n}".format(dec1, dec2, dec3))
+dec1 = Decimal('99999999999999999999999999999999999999999999999999.99')
+dec2 = Decimal('0.02')
+dec3 = dec1 + dec2
+print("Decimals with precision=53 {:n} + {:n} = {:n}".format(dec1, dec2, dec3))
+```
+
 ### Number Bases
 
 By default numbers are displayed in base 10, the following specifiers can be used for other bases:
@@ -245,7 +283,7 @@ Note when uppercase letters are used they result is displayed with uppercase let
 **Math functions:**
 
 x                         | x
---------------------------|-----------------------------------------------------------
+--------------------------|--------------------------------------------------------
 math.acos(x)              | math.gamma(x)
 math.acosh(x)             | math.gcd(a, b)
 math.asin(x)              | math.hypot(x, y)
@@ -255,7 +293,7 @@ math.atan2(y, x)          | math.isinf(x)
 math.atanh(x)             | math.isnan(x)
 math.ceil(x)              | math.ldexp(x, i)
 math.copysign(x, y)       | math.lgamma(x)
-math.cos(x)               | math.log(x\[, base]) - natural log when base is excluded
+math.cos(x)               | math.log(x\[, base]) - exclude base for Natural Log
 math.cosh(x)              | math.log1p(x)
 math.degrees(x)           | math.log2(x)
 math.erf(x)               | math.modf(x)
@@ -1012,12 +1050,30 @@ f         | Floating point decimal format
 F         | Floating point decimal format
 g         | Depends on size, either decimal or exponential format (lowercase)
 G	      | Depends on size, either decimal or exponential format (uppercase)
+n         | Use locale stettings for thousand sep and decimal (int, float, decimal)
 c         | Single character (integer or ASCII character).
 r         | String (converts any python object using repr()).
 s         | String (converts any python object using str()).
 ,         | include commas (thousand separator) in number
 .         | include decimal in floating point numbers
 number    | the number of characters, space fill as needed
+
+### Setting Locale
+
+Instead of placing a comma in the format string you can use the locale settings to specify what thousands separator to use, along with what character to use to show the decimal value.
+
+```python
+import locale
+
+# US based comma thousand separators and period for decimal point.
+locale.setlocale(locale.LC_ALL, "en_US.UTF-8")
+
+# Use the system locale (based on environment variable):
+locale.setlocale(locale.LC_ALL, "")
+
+# Reset to the defaul (no thousand separator)
+locale.setlocale(locale.LC_ALL, "C")
+```
 
 # File Handling
 
