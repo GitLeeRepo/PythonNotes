@@ -19,7 +19,7 @@ Notes on the Python3 programming language, examples use Python3 syntax, not Pyth
 
 # Concepts and Terminology
 
-* **\>\>\>** - as used in this document is simply the prompt as displayed in the **Python Shell**.  It precedes a Python statement, and if followed by a line without these angle brackets, then these linse represents the output of that statement.  These angle brackets are not used for those sections that represent the code as it appears in a script file, rather than in the interactive shell. 
+* **\>\>\>** - as used in this document is simply the prompt as displayed in the **Python Shell**.  It precedes a Python statement, and if followed by a line without these angle brackets, then these lines represents the output of that statement.  These angle brackets are not used for those sections that represent the code as it appears in a script file, rather than in the interactive shell. 
 
 # Installation
 
@@ -35,12 +35,12 @@ The interactive shell is available when you type **python3** by itself on the co
 
 ## Command line
 
-* **-i scriptname.py** - loads a runs the script inside the interfactive environment.
+* **-i scriptname.py** - loads a runs the script inside the interactive environment.
 
 ## Internal Prompt >>>
 
-* **help()** - places you into the help subsystem where you can enter help commands.  Type quite to return to the Python interpretter.
-* **help(\<object\>)** - loads help on the specified module (if it has been loaded with import) or other built-in function in a man page like interace.  Type "q" to quit.
+* **help()** - places you into the help subsystem where you can enter help commands.  Type quite to return to the Python interpreter.
+* **help(\<object\>)** - loads help on the specified module (if it has been loaded with import) or other built-in function in a man page like interface.  Type "q" to quit.
 * **dir(<module>)** - shows the properties and methods of a loaded module, for example, **dir(sys)** (after first typing **import sys**)
 
 * **\_ (underscore)** - holds the value of the last operation, which can be assigned or used, e.g, **newvar = \_**.  This is only available in the interactive environment.
@@ -143,7 +143,7 @@ False
 True
 ```
 
-Note there can be some inconsitencies when comparing basic data types using **is**, for example:
+Note there can be some inconsistencies when comparing basic data types using **is**, for example:
 
 ```python
 >>> s1 = "This is a test"
@@ -155,9 +155,9 @@ False
 >>> s1 is s2
 True
 ```
-For the shorter version, Python appears to try to optimize things by having them point to the same underlying object (even though they were asssigned separately).  In these cases it is better to compare values using the **== equality** operator.
+For the shorter version, Python appears to try to optimize things by having them point to the same underlying object (even though they were assigned separately).  In these cases it is better to compare values using the **== equality** operator.
 
-The **is operator** can be used to compare to Python's **None**, which is the equivellent of **null** in other languages
+The **is operator** can be used to compare to Python's **None**, which is the equivalent of **null** in other languages
 
 ```python
 >>> s1="Hello"
@@ -174,7 +174,7 @@ Note that an empty string is not considered **None**
 
 ## Numbers
 
-Numbers in Python are not limitted by any particular byte size, but rather by the available memory on the computer.
+Numbers in Python are not limited by any particular byte size, but rather by the available memory on the computer.
 
 ### Numeric/String Conversions
 
