@@ -271,11 +271,12 @@ math.fsum(iterable)       | n/a
 
 **Math Constants:**
 
-math.e
-math.inf
-math.nan
-math.pi
-math.tau
+x                          | x
+---------------------------|-------------
+math.e                     | math.pi
+math.inf                   | math.tau
+math.nan                   | n/a
+
 
 
 ## Strings
