@@ -245,7 +245,7 @@ Note when uppercase letters are used they result is displayed with uppercase let
 **Math functions:**
 
 x                         | x
---------------------------|--------------------------------------------------
+--------------------------|-----------------------------------------------------------
 math.acos(x)              | math.gamma(x)
 math.acosh(x)             | math.gcd(a, b)
 math.asin(x)              | math.hypot(x, y)
@@ -255,7 +255,7 @@ math.atan2(y, x)          | math.isinf(x)
 math.atanh(x)             | math.isnan(x)
 math.ceil(x)              | math.ldexp(x, i)
 math.copysign(x, y)       | math.lgamma(x)
-math.cos(x)               | math.log(x[, base])
+math.cos(x)               | math.log(x\[, base]) - natural log when base is excluded
 math.cosh(x)              | math.log1p(x)
 math.degrees(x)           | math.log2(x)
 math.erf(x)               | math.modf(x)
