@@ -99,13 +99,24 @@ assert | del      | finally | import  | nonlocal | return | yield
 break  | elif     | for     | in      | not      | True   | n/a
 class  | else     | from    | is      | or       | try    | n/a
 
+## Python Built-ins
+
+To see a list of Python's Built-ins, i.e., functions, data types, and exceptions (exceptions start with capital letters) enter the following in the Python Shell:
+
+```python
+>>> dir (__builtins__)
+['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException', 'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning', 'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError', 'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning', 'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False', 'FileExistsError', 'FileNotFoundError', 'FloatingPointError', 'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError', 'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError', 'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError', 'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented', 'NotImplementedError', 'OSError', 'OverflowError', 'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError', 'RecursionError', 'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning', 'StopAsyncIteration', 'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError', 'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError', 'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError', 'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning', 'ValueError', 'Warning', 'ZeroDivisionError', '_', '__build_class__', '__debug__', '__doc__', '__import__', '__loader__', '__name__', '__package__', '__spec__', 'abs', 'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits', 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit', 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass', 'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property', 'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars', 'zip']
+```
+
+Note that names that start end end with double underscores should not be used directly.  While those that start with underscores, but don't end with them are intended for special uses.
+
 # Types and Objects
 
 All data types in Python are objects, which have associated methods and properties.  Python is a dynamically typed language, and the type can be dynamically changed in the same scope.  For example, the variable named 'principal' can be assigned 14.51 (float), 12 (integer), and "Mr Smith", all in the same scope within the program, in each case a new instance is created, and the variable name references this new instance.  If the old instance doesn't have any other variable names referencing it then it will be eligible for garbage collection.
 
 ## Types
 
-* Numbers (immutable) - includes both integer and floating point
+* Numbers (immutable) - includes both integer (including boolean) and floating point
 * Sequences
   * Strings (immutable)
   * Tuples (immutable)
@@ -184,7 +195,11 @@ Note that an empty string is not considered **None**
 
 ## Numbers
 
-Numbers in Python are not limited by any particular byte size, but rather by the available memory on the computer.
+Numbers can represent **integers** (includes **boolean**), and **float** (includes **double**, **complex**, and **decimal.Decimal**, in Python integers are not limited by any particular byte size, but rather by the available memory on the computer.  Python floats are limited to the size used by the C compiler that compiled Python.
+
+The **decimal.Decimal** numeric type is import from the **decimal** module and is used to represent large numbers that contain decimal points (such as in financial transactions) accurately, which is not possible with standard float because of precision issues.  It is however a slower data type to work with than is a standard float.  **Ints** can also be used to represent large numbers with precision.
+
+In most cases the different numeric types can be mixed (**decimal.Decimal** is the exception).  Using **floats** and **integers** together results in a **float** result, using **complex** and **float** together results in a **complex** number.  **decimal.Decimal** can only be used with other **decimal.Decimal** numbers or with **ints**, which results in a **decimal.Decimal** result.
 
 ### Numeric/String Conversions
 
@@ -214,6 +229,54 @@ To convert an integer or float to a string:
 >>> float(s)  # convert the string variable back to a float
 2e+19
 ```
+
+### Number Bases
+
+By default numbers are displayed in base 10, the following specifiers can be used for other bases:
+
+* **0b10101010** - binary numbers
+* **0o675431** - octal numbers
+* **0xFE05AB7D** - hexadecimal numbers
+
+Note when uppercase letters are used they result is displayed with uppercase letters.
+
+### Math Module
+
+**Math functions:**
+
+x                         | x
+--------------------------|--------------------------------------------------
+math.acos(x)              | math.gamma(x)
+math.acosh(x)             | math.gcd(a, b)
+math.asin(x)              | math.hypot(x, y)
+math.asinh(x)             | math.isclose(a, b, \*, rel_tol=1e-09, abs_tol=0.0)
+math.atan(x)              | math.isfinite(x)
+math.atan2(y, x)          | math.isinf(x)
+math.atanh(x)             | math.isnan(x)
+math.ceil(x)              | math.ldexp(x, i)
+math.copysign(x, y)       | math.lgamma(x)
+math.cos(x)               | math.log(x[, base])
+math.cosh(x)              | math.log1p(x)
+math.degrees(x)           | math.log2(x)
+math.erf(x)               | math.modf(x)
+math.erfc(x)              | math.pow(x, y)
+math.exp(x)               | math.radians(x)
+math.expm1(x)             | math.sin(x)
+math.fabs(x)              | math.sinh(x)
+math.factorial(x)         | math.sqrt(x)
+math.floor(x)             | math.tan(x)
+math.fmod(x, y)           | math.tanh(x)
+math.frexp(x)             | math.trunc(x)
+math.fsum(iterable)       | n/a
+
+**Math Constants:**
+
+math.e
+math.inf
+math.nan
+math.pi
+math.tau
+
 
 ## Strings
 
