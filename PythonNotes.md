@@ -89,6 +89,16 @@ def main():
 main()
 ```
 
+# Python Keywords
+
+x      | x        | x       | x       | x        | x      | x
+-------|----------|---------|---------|----------|--------|-------
+and    | continue | except  | global  | lambda   | pass   | while
+as     | def      | False   | if      | None     | raise  | with
+assert | del      | finally | import  | nonlocal | return | yield
+break  | elif     | for     | in      | not      | True   | n/a
+class  | else     | from    | is      | or       | try    | n/a
+
 # Types and Objects
 
 All data types in Python are objects, which have associated methods and properties.  Python is a dynamically typed language, and the type can be dynamically changed in the same scope.  For example, the variable named 'principal' can be assigned 14.51 (float), 12 (integer), and "Mr Smith", all in the same scope within the program, in each case a new instance is created, and the variable name references this new instance.  If the old instance doesn't have any other variable names referencing it then it will be eligible for garbage collection.
@@ -608,6 +618,10 @@ while len(s) > 0:
 ```
 
 # Functions
+
+## Function Return Values
+
+Every function has a return value, if it is not specified it defaults to **None**.  You can return either a single value or a **tuple** values.  The **return** keyword is used to return the value(s).  The return values can be ignored, in which case they are discarded.  
 
 ## Python 3 Built-in Functions
 
