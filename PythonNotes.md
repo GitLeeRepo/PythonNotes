@@ -15,7 +15,7 @@ Notes on the Python3 programming language, examples use Python3 syntax, not Pyth
 * [Conditionals](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#conditionals)
 * [Loops](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#loops)
 * [Functions](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#functions)
-* [Modules](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#modules-and-packages)
+* [Modules and Packages](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#modules-and-packages)
 * [Classes / Object Oriented Programming](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#classes--object-oriented-programming)
 * [Input / Output](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#input--output)
 * [File Handling](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#file-handling)
@@ -1100,6 +1100,91 @@ print(basename(filename)) # collisions with basename possible
 
 from os.path import *
 print(basement(filename)) # numerous collisions possible
+```
+
+## Packages
+
+A package is a collection of modules that are stored in a directory structure, with the subfolders having an \_\_init\_\_.py file (it can be empty or it can contain initialization code for the package).  They are referenced in a Python script by importing the package and one or more of its modules.
+
+### Simple Example
+
+**module_ex1a** - note despite its filename this one is not a module, but imports the modules
+
+```python
+# Example of calling custom modules, one of which is in the same folder
+# the other one is in the subfolder named common.  This is considered
+# a package.  These simply print a message and return.
+#
+# Note: the common folder contains an empty file called __init__.py
+# which is what makes this folder a package.
+
+import module_ex1b               # imports from the same folder or sys.path folder
+from  common import module_ex1c  # imports from the common subfolder (package)
+
+module_ex1b.hello()
+module_ex1c.hello()
+```
+
+**Output:**
+
+```bash
+Hello from module_ex1b
+Hello from common.module_ex1c
+```
+
+**module_ex1b** - this module is in the same folder as **module_ex1a**
+
+```python
+# Example of a module imported by module_ex1a.py  This one is in the same
+# folder as module_ex1a.py
+
+# uses the __name__ global which contains the module name
+def hello():
+    print("Hello from", __name__)
+```
+
+**module_ex1c** - this module is in the **common** subfolder from where **module_ex1a** is located
+
+```python
+# Example of a module imported by module_ex1a.py  This one is in a
+# subfolder named 'common' from where module_ex1a is located, which 
+# along with the __init_.py file makes it part of a package called 
+# common. The __init__.py file can be empty or contain initaliztion 
+# code for the package.
+
+# uses the __name__ global which contains the module name
+def hello():
+    print("Hello from", __name__)
+```
+
+### Example Package directory structure
+
+This example is from: [python.org](https://docs.python.org/2/tutorial/modules.html) on how you might choose to structure a sound package.
+
+```
+sound/                          Top-level package
+      __init__.py               Initialize the sound package
+      formats/                  Subpackage for file format conversions
+              __init__.py
+              wavread.py
+              wavwrite.py
+              aiffread.py
+              aiffwrite.py
+              auread.py
+              auwrite.py
+              ...
+      effects/                  Subpackage for sound effects
+              __init__.py
+              echo.py
+              surround.py
+              reverse.py
+              ...
+      filters/                  Subpackage for filters
+              __init__.py
+              equalizer.py
+              vocoder.py
+              karaoke.py
+              ...
 ```
 
 # Classes / Object Oriented Programming
