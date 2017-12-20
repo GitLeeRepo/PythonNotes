@@ -382,6 +382,17 @@ print (s[1:8]) #ello wo - start after 1 through 8
 print (s[1:-4]) #ello wo - same result indexing from right
 ```
 
+### Raw Strings with Regular Expressions
+
+Because **regular expressions** use a lot of special characters that would have to be escaped to work correctly, Python provides a simpler solution using **raw strings**, which don't need to be escaped, all characters a literals.  You create raw strings by preceding the opening quote with an **r**.
+
+```python
+import re
+
+phone_re = re.compile(r"((?:[(]\d+[)])?\s*\d+(?:-\d+)?)$")
+match = phone_re.search(personstr)
+```
+
 ## Lists
 
 Note the following features in the list below:
