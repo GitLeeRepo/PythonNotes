@@ -396,7 +396,7 @@ Note the following features in the list below:
 * You can concatenate lists creating a combined list
 * You can print the entire list with one print (no loops), subsets (through slicing) or individual elements through indexing
 * Lists can be created from splitting strings based on a delimiter
-* Lists can be converted (joined) to a string with a specified delimeter
+* Lists can be converted (joined) to a string with a specified delimiter
 * Lists can be iterated with **for** loops
 * Example list methods shown: append(), insert(), remove(), pop(), sort(), clear()
 * Methods NOT shown: extend(), index(), count(), reverse(), copy()
@@ -477,13 +477,13 @@ print(empty, "Empty again")
 fromsplit = "item1, item2, item3".split(",")
 print(fromsplit)
 
-# join elements into a string separated by the specified delimeter
+# join elements into a string separated by the specified delimiter
 print(", ".join(food))
 print("\n".join(food[0:2]))  # print first 2 on their own line
 
 # using for loop method instead of join. This would be more
-# complicated if single line comma delimeted used because of
-# trailing delimiter, but newline delimeted here not too bad
+# complicated if single line comma delimited used because of
+# trailing delimiter, but newline delimited here not too bad
 for item in food[2:]: # print the remaining items using for
     print(item)  
 ```
@@ -508,7 +508,7 @@ print(a)
 # Sorted ascending alphabetic
 print(sorted(a))
 
-# sorted decending alphabetc
+# sorted descending alphabetic
 print(sorted(a, reverse=True))
 
 # use the len() function to sort by length
