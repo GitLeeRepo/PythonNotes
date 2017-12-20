@@ -384,15 +384,20 @@ print (s[1:-4]) #ello wo - same result indexing from right
 
 ## Lists
 
-Note the following in the list below:
+Note the following features in the list below:
 * Lists can contain mixed types
 * Lists can be sliced with **\[n:n\]** notation
+* Lists can be easily sorted
 * Lists can be appended to (they are mutable) **empty.append()**
+* Lists items can be updated **empty\[1] = "very"**
+* List Items can be removed **empty.remove("very")** and **empty.pop()**
 * You can create references to lists, in which two variables point to the same list
 * You can make copies of lists
 * You can concatenate lists creating a combined list
 * You can print the entire list with one print (no loops), subsets (through slicing) or individual elements through indexing
 * Lists can be created from splitting strings based on a delimiter
+* Lists can be converted (joined) to a string with a specified delimeter
+* Lists can be iterated with **for** loops
 * Example list methods shown: append(), insert(), remove(), pop(), sort(), clear()
 * Methods NOT shown: extend(), index(), count(), reverse(), copy()
 
@@ -411,15 +416,19 @@ print(food[0:9])
 # print one element
 print(food[3], "and", food[0])
 
-# print a range of elements
+# print a range of elements with slice
 print(food[0:4])     # print the first 4 elements
 print(food[0:-1])    # print all but the last element
-print(food[4:])      # print [ 'corn' ]
+print(food[-1])      # print the last element
 
 # concatenate lists, creates a new list
 
 shoppinglist = food + items
 print(shoppinglist)
+
+# sort the list
+shoppinglist.sort()
+print("sorted:", shoppinglist)
 
 # mixed strings and numbers
 print(mixed)
@@ -437,12 +446,8 @@ empty.append('empty')
 empty.append('anymore')
 print(empty)
 
-# using split
-fromsplit = "item1, item2, item3".split(",")
-print(fromsplit)
-
 # this appends a nested list within a list
-empty.append(fromsplit)
+empty.append(['with', 'nested', 'list'] )
 print(empty)        # prints all list items, including nested list
 print(empty[3])     # prints the nested list only
 print(empty[3][1])  # prints an individual item from the nested list
@@ -451,21 +456,36 @@ print(empty[3][1])  # prints an individual item from the nested list
 empty.insert(1, "new pos 1")
 print(empty)
 
-# remove what was just added
-empty.remove("new pos 1")
+# update the element just added
+empty[1] = "very"
+print(empty)
+
+# remove what was just added & updated
+empty.remove("very")
+# del(empty[1]) would remove the same item
 print(empty)
 
 # pop the last item from the list (in this case a nested list)
 x = empty.pop()
 print(x, "has been popped from", empty)
 
-# sort the list
-food.sort()
-print("sorted:", food)
-
 # clear the list completely
 empty.clear()
 print(empty, "Empty again")
+
+# using split to go from string to list
+fromsplit = "item1, item2, item3".split(",")
+print(fromsplit)
+
+# join elements into a string separated by the specified delimeter
+print(", ".join(food))
+print("\n".join(food[0:2]))  # print first 2 on their own line
+
+# using for loop method instead of join. This would be more
+# complicated if single line comma delimeted used because of
+# trailing delimiter, but newline delimeted here not too bad
+for item in food[2:]: # print the remaining items using for
+    print(item)  
 ```
 
 ## Tuples
