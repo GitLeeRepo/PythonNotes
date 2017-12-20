@@ -2,6 +2,25 @@
 
 Notes on the Python3 programming language, examples use Python3 syntax, not Python2.
 
+## Contents
+
+* [References](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#references)
+* [Concepts and Terminology](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#concepts-and-terminology)
+* [Installation](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#installation)
+* [Python Shell](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#python-shell)
+* [Python Script Structure](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#python-script-structure)
+* [Python Keywords](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#python-keywords)
+* [Types and Objects](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#types-and-objects)
+* [Operators and Expressions](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#operators-and-expressions)
+* [Conditions](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#operators-and-expressions)
+* [Loops](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#loops)
+* [Functions](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#functions)
+* [Classes / Object Oriented Programming](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#classes--object-oriented-programming)
+* [Input / Output](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#input--output)
+* [File Handling](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#file-handling)
+* [Regular Expressions](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#regular-expressions)
+* [Exceptions](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#exceptions)
+
 # References
 
 * [Python 3.5.4 Documentation](https://docs.python.org/3.5/)
