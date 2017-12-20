@@ -1259,7 +1259,7 @@ person += ["Sarah Johnson", "456 Main Street", "(999)888-9999"]
 personstr = "\n".join( person)
 print(personstr)
 
-# find all occurances within the multiline string
+# find all occurrences within the multiline string
 match = re.findall(r".*Jo.*", personstr)
 print (match)
 match = re.findall(r".*Main.*", personstr)
@@ -1285,7 +1285,7 @@ for g in grps:
         print (g.strip('.'))
 
 # using the same expression, but with fewer components (e.g, bob, not
-# bob.roperts) to show the flexibility of the expression with its optional
+# bob.roberts) to show the flexibility of the expression with its optional
 # groups (those with the '?' following them)
 match = email_re.search("bob@example.com")
 grps = match.groups()
