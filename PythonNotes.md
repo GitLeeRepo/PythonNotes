@@ -771,7 +771,7 @@ True
 False
 ```
 
-# Conditions
+# Conditionals
 
 ## Conditional Operator Chaining
 
