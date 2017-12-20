@@ -1187,6 +1187,69 @@ sound/                          Top-level package
               ...
 ```
 
+## Standard Library and Key Third Party Modules & Packages
+
+### Standard Library
+
+Python3 has a very extensive standard library for a number of areas.  Some of them are listed here, but for a complete list refer to Python.org's [The Python Standard Library](https://docs.python.org/3/library/index.html)
+
+* **string**
+* **sys**
+* **os**
+* **io**
+* **math**
+* **cmath**
+* **random**
+* **decimal**
+* **fractions**
+* **statistics**
+* **difflib**
+* **re**
+* **collections**
+* **array**
+* **pathlib**
+* **os.path**
+* **fileinput**
+* **zlib**
+* **gzip**
+* **zipfile**
+* **tarfile**
+* **csv**
+* **hashlib**
+* **time**
+* **calandar**
+* **logging**
+* **curses**
+* **errno**
+* **threading**
+* **multiprocessing**
+* **concurrent**
+* **queue**
+* **socket**
+* **ssl**
+* **asyncio**
+* **signal**
+* **nmap**
+* **email**
+* **mailbox**
+* **json**
+* **mimetypes**
+* **html**
+* **xml**
+* **cgi**
+* **urllib**
+* **http**
+* **ftplib**
+* **poplib**
+* **imaplib**
+* **smptplib**
+* **smtpd**
+
+### Key Third Party Libraries
+
+* **NumPy**
+* **SciPy**
+
 # Classes / Object Oriented Programming
 
 TODO - Placeholder
