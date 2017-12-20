@@ -12,7 +12,7 @@ Notes on the Python3 programming language, examples use Python3 syntax, not Pyth
 * [Python Keywords](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#python-keywords)
 * [Types and Objects](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#types-and-objects)
 * [Operators and Expressions](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#operators-and-expressions)
-* [Conditions](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#operators-and-expressions)
+* [Conditionals](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#conditionals)
 * [Loops](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#loops)
 * [Functions](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#functions)
 * [Classes / Object Oriented Programming](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#classes--object-oriented-programming)
