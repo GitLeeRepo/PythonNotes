@@ -386,14 +386,15 @@ print (s[1:-4]) #ello wo - same result indexing from right
 
 Because **regular expressions** use a lot of special characters that would have to be escaped to work correctly, Python provides a simpler solution using **raw strings**, which don't need to be escaped, all characters a literals.  You create raw strings by preceding the opening quote with an **r**.
 
-Refer to the **Regular Expression** section later in this document for more information and examples on the regular expressions themselves.
-
 ```python
 import re
 
 phone_re = re.compile(r"((?:[(]\d+[)])?\s*\d+(?:-\d+)?)$")
 match = phone_re.search(personstr)
 ```
+
+Refer to the [**Regular Expression**](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#regular-expressions) section later in this document for more information and examples on the regular expressions themselves.
+
 
 ## Lists
 
