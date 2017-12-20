@@ -15,6 +15,7 @@ Notes on the Python3 programming language, examples use Python3 syntax, not Pyth
 * [Conditionals](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#conditionals)
 * [Loops](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#loops)
 * [Functions](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#functions)
+* [Modules](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#modules-and-packages)
 * [Classes / Object Oriented Programming](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#classes--object-oriented-programming)
 * [Input / Output](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#input--output)
 * [File Handling](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#file-handling)
@@ -28,6 +29,7 @@ Notes on the Python3 programming language, examples use Python3 syntax, not Pyth
 
 ## Books
 
+* [Programming in Python 3: A Complete Introduction to the Python Language](https://www.amazon.com/gp/product/B002YYWEHW)
 * [Python Essentials](https://www.amazon.com/Python-Essential-Reference-Developers-Library-ebook/dp/B002EF2AQ6)
 
 ## YouTube Videos
@@ -1058,6 +1060,46 @@ def main():
         matcher.close()
 
 main()
+```
+
+# Modules and Packages
+
+**Modules** provide a means of grouping functions and custom data structures together so that they can be distributed across multiple applications through **import** statements.  **Packages** provide a means of grouping modules together in a logical manner.
+
+A **module** is like any other Python file, typically with a **\*.py** extension.  The difference is that that are not intended to be run as a stand alone program, but to be imported into another script.
+
+## Import examples
+
+**Format:**
+
+```python
+import <importable>[, <importable2>,...]
+import <importable> as <name>
+
+from <importable> import <object>
+from <importable> import <object> as <name>
+from <importable> *
+```
+
+**Examples:**
+
+Based on example from: [Programming in Python 3: A Complete Introduction to the Python Language](https://www.amazon.com/gp/product/B002YYWEHW)
+
+```python
+import os
+print(os.path.basename(filename))  # safe fully qualified
+
+import os.path
+print(path.basename(filename)) # collisions with path possible
+
+from os import path # same as above, different syntax
+print(path.basename(filename)) # collisions with path possible
+
+from os.path import basename
+print(basename(filename)) # collisions with basename possible
+
+from os.path import *
+print(basement(filename)) # numerous collisions possible
 ```
 
 # Classes / Object Oriented Programming
