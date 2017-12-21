@@ -1320,6 +1320,34 @@ Python3 has a very extensive standard library for a number of areas.  Some of th
 * **super class** - refer to **base class**
 * **super()** - method used to call the base class method from the derived method
 
+## Class Syntax
+
+```python
+# stand alone class
+class classname:
+    data & methods
+    
+# class that inherits from another class or classes
+class classname(base_classes)
+    data & methods
+```
+
+## Examples
+
+### Very Simple Example
+
+```python
+# A very simple class
+class SimpleOne:
+    __num = 5;  # pseudo private, although accessible with <instance_name>._SimpleOne__num
+
+    def show(self):
+        print("I am a very simple class named {} with a value of {}".format(self.__class__.__name__,  self.__num))
+
+simpleone = SimpleOne()
+simpleone.show()
+```
+
 # Input / Output
 
 ## Standard Input
