@@ -1656,7 +1656,7 @@ fw2.close()
 
 Refer to my [RegExNotes](https://github.com/GitLeeRepo/RegExNotes/blob/master/RegExNotes.md#overview) for more info on regular expressions themselves (independent of Python)
 
-Note in the example below I always check of **if match:**.  This is important since if a match is not made, match is set to nothing, and therefore anything that attempts to use match will throw an exception.
+Note in the example below I always check for **if match:**.  This is important since if a match is not made, match is set to nothing, and therefore anything that attempts to use match will throw an exception.
 
 ```python
 # Some regular expression examples.  Note the use of raw strings, strings
