@@ -1297,22 +1297,22 @@ Python3 has a very extensive standard library for a number of areas.  Some of th
 ## Terminology
 
 * **access control** - this is NOT explicitly provided in Python as in other object oriented languages, in which you can define data and methods to be private or public.  In effect Python allows data and methods to be private to the class by preceding them with two underscores.
-* **aggregation** - also called **composistion**.  It is the process of containing other class objects with a class through defining them within the class or passing them in.  They have a **has-a relation** (a car has a color) rather than the **is-a relation** of inheritance.  
+* **aggregation** - also called **composition**.  It is the process of containing other class objects with a class through defining them within the class or passing them in.  They have a **has-a relation** (a car has a color) rather than the **is-a relation** of inheritance.  
 * **attributes** - two major types: 1) callable attributes (methods) 2) data attributes, which are often just referred to as attributes
 * **base class** - the class which is another class **inherited from**
 * **class** - a custom data type that defines both data and methods
 * **class variable** - static variables accessible to all instances of a class
 * **composition** - refer to **aggregation**
 * **derived class** - a class which **inherits** from another class
-* **encapsolation** - containing the functionality and data within an object
-* **inheritance** - the process of one class inheriting the functionalit and data of another class, refer to **specialization**.  Inheritance provides an **is-a relation** (a circle is a shape) rather than a **has-a relation** through **aggregation**.
-* **instance** - a class that has been instantiated in memory, a class can have many instancces
+* **encapsulation** - containing the functionality and data within an object
+* **inheritance** - the process of one class inheriting the functionality and data of another class, refer to **specialization**.  Inheritance provides an **is-a relation** (a circle is a shape) rather than a **has-a relation** through **aggregation**.
+* **instance** - a class that has been instantiated in memory, a class can have many instances
 * **instance variable** - data that is unique to a particular object instance
-* **methods** - a function that is encapsolated in a method and has access to the data of the method.  It performs the classes actions.
+* **methods** - a function that is encapsulated in a method and has access to the data of the method.  It performs the classes actions.
 * **object** - an instance of a class that has memory allocated to it
 * **overloading** - Python does NOT provide overloading as in some other object oriented languages, which allow multiple methods to have the same name as long as their parameter signatures are different.  This is not much of an issue because of Python's flexibility in defining parameters, such as optional parameters.
 * **override** - the process of a derived class overriding the methods of a base class.  When a method is found in both the base class and derived class the derived method is called.  For a derived method to specifically call a base method the built-in **super()** method is called.  In Python all methods are **virtual methods**.  Refer also to **polymorphism**. 
-* **polymorphism** - when calling an objects method, the appropriate **overriden** method is called, if one exists.  This will even occur when a derived method is accessed via a base methods definition (as when passing the derived method to a function/method that specifies the base method as a paramenter.  This is a very powerful aspect of object oriented programming, which makes certain things easy that would otherwise be difficult and times consuming to accomplish.  It also is a big part of the **reuse** aspect of object oriented code.  Refer also to **override**.
+* **polymorphism** - when calling an objects method, the appropriate **overridden** method is called, if one exists.  This will even occur when a derived method is accessed via a base methods definition (as when passing the derived method to a function/method that specifies the base method as a parameter.  This is a very powerful aspect of object oriented programming, which makes certain things easy that would otherwise be difficult and times consuming to accomplish.  It also is a big part of the **reuse** aspect of object oriented code.  Refer also to **override**.
 * **property** - provide access to instance variables, using methods behind the scenes.
 * **special methods** - predefined methods that begin and end with two underscores  \_\_len\_\_().  They allow us to add predefined functionality to our classes.
 * **specialization** - when a class inherits from a more generic or abstract class and provides a more specialized functionality through adding or replacing the base class methods or instance variables.  The relationship of circle to shape for example.  Also called subclassing.
