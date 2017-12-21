@@ -1455,8 +1455,79 @@ locale.setlocale(locale.LC_ALL, "C")
 
 # File Handling
 
+## File Input/Output Examples
+
+## Example using an Implicit Read
+
+This example copies a file by reading without an explicit readline, the for statement itself performs the read.  It uses the file.write() method for file output
+
+While not the fastest read operation, it is the more memory efficient in that it is processing one line at a time.
+
 ```python
-fr = open("file_ex1.py")      # open for read
+fr = open("file_ex1.py", "r")   # open for read
+fw = open("out1.txt", "w")      # open for write
+
+for line in fr:
+    print(line, end="")    # stdout - remove the newline character to avoid extra line
+    fw.write(line)         # write to file, no extra newline (only from read)
+
+fr.close()
+fw.close()
+```
+
+## Example using an Readlines() into a List
+
+This example copies a file by reading the lines into a list with readlines(), demonstrating that it can be sliced like a list, and then using a for loop, to print the list items (lines) out one by one.  It uses the file.write() method to write to a file.
+
+In this case if it is a large file, be aware that the entire file (list) is stored in memory
+
+```python
+fr = open("file_ex2.py")    # open for read
+fw = open("out1.txt", "w")  # open for write
+
+# read all the lines of the file into a list
+lines = fr.readlines()
+# because it is a list it can use list slicing
+print("As a sliced list:\n\n", lines[4:6], "\n")
+
+# you can still process the file line by line using for
+for line in lines:
+    print(line, end="")     # stdout - remove the newline character to avoid extra line
+    fw.write(line)          # write to file, no extra newline (only from read)
+
+fr.close()
+fw.close()
+```
+
+## Example using an Read() of Entire File
+
+This example copies a file by reading the entire file in one file.read() method.  It uses file.write() method to write the entire file in one operation.
+
+Without any parameters, read() reads entire file is read into memory, although the amount read can be controlled by passing in a size parameter, i.e., read(size).
+
+```python
+fr = open("file_ex3.py", "r")   # open for read
+fw = open("out1.txt", "w")      # open for write
+
+# read the entire file in as one (potentially huge) string in text mode
+# note that in binary mode it is read as an object
+# also note that the size to be read can be specified as a parameter
+text = fr.read()
+
+# write the entire file in one operation
+print(text)     # stdout
+fw.write(text)  # write to file
+
+fr.close()
+fw.close()
+```
+
+## Example using Readline() in while Loop
+
+This example copies a file by reading with readline() using a while loop, using both the file.write() method and print() function for outputing to a file.  This is a more traditional way that you might find in other languages, but in Python file_ex1.py does this in a more conscise Pythonic manner using a for loop.  This example uses a second output file just to show that the standard print function can also be used to write to files.
+
+```python
+fr = open("file_ex4.py")      # open for read
 fw1 = open("out1.txt", "w")   # open for write
 fw2 = open("out2.txt", "w")   # open for write
 
