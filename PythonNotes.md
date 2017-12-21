@@ -1301,7 +1301,7 @@ Python3 has a very extensive standard library for a number of areas.  Some of th
 * **attributes** - two major types: 1) callable attributes (methods) 2) data attributes, which are often just referred to as attributes
 * **base class** - the class which is another class **inherited from**
 * **class** - a custom data type that defines both data and methods
-* **class variable** - static variables accessible to all instances of a class.  The use of the word 'static' here is not the same as in C++ classes where it is tied to an uninstantiated class, but not accessible from an instance.  In Python, it just means the variable is declared in the class outside of any methods.  If it is set to a default value all instances will see that same default value, but if any instance changes it, only that instance will reflect the change.
+* **class variable** - static variables accessible to all instances of a class.  The use of the word 'static' here is not the same as in C++ classes where it is tied to an un-instantiated class, but not accessible from an instance.  In Python, it just means the variable is declared in the class outside of any methods.  If it is set to a default value all instances will see that same default value, but if any instance changes it, only that instance will reflect the change.
 * **composition** - refer to **aggregation**
 * **derived class** - a class which **inherits** from another class
 * **encapsulation** - containing the functionality and data within an object
@@ -1338,7 +1338,7 @@ class classname(base_classes)
 
 A simple class and derived class
 
-It shows the diffence between class and instance variables, with class variables retaining  their values across instances, and with instance variables having unique values per instance.  This is reflected in both the inherited instance and the new instance declarations
+It shows the difference between class and instance variables, with class variables retaining  their values across instances, and with instance variables having unique values per instance.  This is reflected in both the inherited instance and the new instance declarations
 
 ```python
 class SimpleOne:
@@ -1355,7 +1355,7 @@ class SimpleOne:
                  format(self.__class__.__name__,  self.__num, self.instnums, self.classnums))
 
 class SimpleTwo(SimpleOne):
-    __num = 2   # psuedo private
+    __num = 2   # pseudo private
 
     # class variable
     # classnums is inherited from SimpleOne
@@ -1673,7 +1673,7 @@ person += ["Sarah Johnson", "456 Main Street", "(999)888-9999"]
 personstr = "\n".join( person)
 print(personstr)
 
-# find all occurances within the multiline string
+# find all occurrences within the multiline string
 match = re.findall(r".*Jo.*", personstr)
 if match:
     print (match)
@@ -1703,7 +1703,7 @@ if match:
             print (g.strip('.'))
 
 # using the same expression, but with fewer components (e.g, bob, not
-# bob.roperts) to show the flexibility of the expression with its optional
+# bob.roberts) to show the flexibility of the expression with its optional
 # groups (those with the '?' following them)
 match = email_re.search("bob@example.com")
 if match:

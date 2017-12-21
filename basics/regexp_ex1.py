@@ -16,14 +16,17 @@ print(personstr)
 
 # find all occurances within the multiline string
 match = re.findall(r".*Jo.*", personstr)
-print (match)
+if match:
+    print (match)
 match = re.findall(r".*Main.*", personstr)
-print (match)
+if match:
+    print (match)
 
 # create a regular expression for a US phone number pattern
 phone_re = re.compile(r"((?:[(]\d+[)])?\s*\d+(?:-\d+)?)$")
 match = phone_re.search(personstr)
-print (match.group(0)) # group zero is the entire match
+if match:
+    print (match.group(0)) # group zero is the entire match
 
 # create a regular expression for an email address, using groups
 # (the parenthesis) both for isolating optional parts and for
@@ -32,19 +35,21 @@ email_re = re.compile("^((\w+\.+)?(\w+)@(\w+)\.(\w+\.+)?(com|net|org))$")
 match = email_re.search("bob.roberts@smtp.example.com")
 
 # creates a tuple containing the individual groups in the expression
-grps = match.groups()
-for g in grps:
-    if g != None:
-        # use a function to remove the trailing period, since the period
-        # itself needs to be inside the optional groups
-        print (g.strip('.'))
+if match:
+    grps = match.groups()
+    for g in grps:
+        if g != None:
+            # use a function to remove the trailing period, since the period
+            # itself needs to be inside the optional groups
+            print (g.strip('.'))
 
 # using the same expression, but with fewer components (e.g, bob, not 
 # bob.roperts) to show the flexibility of the expression with its optional 
 # groups (those with the '?' following them)
 match = email_re.search("bob@example.com")
-grps = match.groups()
-for g in grps:
-    if g != None:
-        print (g.strip('.'))
+if match:
+    grps = match.groups()
+    for g in grps:
+        if g != None:
+            print (g.strip('.'))
 

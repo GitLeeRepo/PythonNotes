@@ -100,9 +100,12 @@ ENV/
 # mypy
 .mypy_cache/
 
-# swap file
+# swap files
 *.swp
 
 # Data and output files
 input*.txt
 out*.txt
+
+# Test files
+test*.py
