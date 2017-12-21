@@ -1343,8 +1343,10 @@ It shows the diffence between class and instance variables, with class variables
 ```python
 class SimpleOne:
     __num = 1  # pseudo private, although accessible with <instance_name>._SimpleOne__num
+    # the class variable
     classnums = [11]   # publicly accessible and inherited by SimpleTwo
 
+    # initialization of the instance variable
     def __init__(self):
         self.instnums = [1]
 
@@ -1354,15 +1356,17 @@ class SimpleOne:
 
 class SimpleTwo(SimpleOne):
     __num = 2   # psuedo private
-                # inherits SimpleOne's classnums
 
+    # class variable
+    # classnums is inherited from SimpleOne
+
+    # initialization of the instance variable
     def __init__(self):
         self.instnums = [2]
 
     def show(self):
         print("derived class name {} with a __num={}, instnums={} and classnums={}". \
                 format(self.__class__.__name__,  self.__num, self.instnums, self.classnums))
-
 
 def main():
     print("\n" + "-"*50)
@@ -1378,8 +1382,8 @@ def main():
     print("Next both simpleone & simpletwo have their own copies of the instnums list")
     print("but each has the same classnums list (values added to one are in the other)")
     print("-"*50)
-    
-        simpleone.instnums.append(2)
+
+    simpleone.instnums.append(2)
     simpleone.classnums.append(22)
     simpletwo.instnums.append(3)
     simpletwo.classnums.append(33)
