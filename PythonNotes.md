@@ -1301,7 +1301,7 @@ Python3 has a very extensive standard library for a number of areas.  Some of th
 * **attributes** - two major types: 1) callable attributes (methods) 2) data attributes, which are often just referred to as attributes
 * **base class** - the class which is another class **inherited from**
 * **class** - a custom data type that defines both data and methods
-* **class variable** - static variables accessible to all instances of a class
+* **class variable** - static variables accessible to all instances of a class.  The use of the word 'static' here is not the same as in C++ classes where it is tied to an uninstantiated class, but not accessible from an instance.  In Python, it just means the variable is declared in the class outside of any methods.  If it is set to a default value all instances will see that same default value, but if any instance changes it, only that instance will reflect the change.
 * **composition** - refer to **aggregation**
 * **derived class** - a class which **inherits** from another class
 * **encapsulation** - containing the functionality and data within an object
@@ -1334,18 +1334,71 @@ class classname(base_classes)
 
 ## Examples
 
-### Very Simple Example
+### Simple Example
+
+A simple class and derived class
+
+It shows the diffence between class and instance variables, with class variables retaining  their values across instances, and with instance variables having unique values per instance.  This is reflected in both the inherited instance and the new instance declarations
 
 ```python
-# A very simple class
 class SimpleOne:
-    __num = 5;  # pseudo private, although accessible with <instance_name>._SimpleOne__num
+    __num = 1  # pseudo private, although accessible with <instance_name>._SimpleOne__num
+    classnums = [11]   # publicly accessible and inherited by SimpleTwo
+
+    def __init__(self):
+        self.instnums = [1]
 
     def show(self):
-        print("I am a very simple class named {} with a value of {}".format(self.__class__.__name__,  self.__num))
+        print("class name {} with a __num={}, instnums={} and classnums={}". \
+                 format(self.__class__.__name__,  self.__num, self.instnums, self.classnums))
 
-simpleone = SimpleOne()
-simpleone.show()
+class SimpleTwo(SimpleOne):
+    __num = 2   # psuedo private
+                # inherits SimpleOne's classnums
+
+    def __init__(self):
+        self.instnums = [2]
+
+    def show(self):
+        print("derived class name {} with a __num={}, instnums={} and classnums={}". \
+                format(self.__class__.__name__,  self.__num, self.instnums, self.classnums))
+
+
+def main():
+    print("\n" + "-"*50)
+    print("Values of simpleone & simpletwo after initialization")
+    print("-"*50)
+
+    simpleone = SimpleOne()
+    simpletwo = SimpleTwo()
+    simpleone.show() # __num=1, instnums=[1] and classnums=[11]
+    simpletwo.show() # __num=2, instnums=[2] and classnums=[11]
+
+    print("\n" + "-"*50)
+    print("Next both simpleone & simpletwo have their own copies of the instnums list")
+    print("but each has the same classnums list (values added to one are in the other)")
+    print("-"*50)
+    
+        simpleone.instnums.append(2)
+    simpleone.classnums.append(22)
+    simpletwo.instnums.append(3)
+    simpletwo.classnums.append(33)
+    simpleone.show() # __num=1, instnums=[1, 2] and classnums=[11, 22, 33]
+    simpletwo.show() # __num=2, instnums=[2, 3] and classnums=[11, 22, 33]
+
+    print("\n" + "-"*50)
+    print("New instance values after initialization, now called simpleone2 & simpletwo2")
+    print("Note how the classnums still retains the values from the prior instances")
+    print("-"*50)
+
+    simpleone2 = SimpleOne()
+    simpletwo2 = SimpleTwo()
+    simpleone2.show() # __num=1, instnums=[1] and classnums=[11, 22, 33]
+    simpletwo2.show() # __num=2, instnums=[2] and classnums=[11, 22, 33]
+
+    print("")
+
+main()
 ```
 
 # Input / Output
