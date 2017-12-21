@@ -1524,7 +1524,7 @@ fw.close()
 
 ## Example using Readline() in while Loop
 
-This example copies a file by reading with readline() using a while loop, using both the file.write() method and print() function for outputing to a file.  This is a more traditional way that you might find in other languages, but in Python file_ex1.py does this in a more conscise Pythonic manner using a for loop.  This example uses a second output file just to show that the standard print function can also be used to write to files.
+This example copies a file by reading with readline() using a while loop, using both the file.write() method and print() function for outputting to a file.  This is a more traditional way that you might find in other languages, but in Python file_ex1.py does this in a more concise Pythonic manner using a for loop.  This example uses a second output file just to show that the standard print function can also be used to write to files.
 
 ```python
 fr = open("file_ex4.py")      # open for read
