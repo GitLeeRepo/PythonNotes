@@ -1053,7 +1053,7 @@ Description from [python.org docs](https://docs.python.org/3/library/asyncio-tas
     
 > Calling a coroutine does not start its code running – the coroutine object returned by the call doesn’t do anything until you schedule its execution.
   
-A coroutine's execution is suspended until a future event occurs.
+A coroutine's execution is suspended until a future event occurs.  A coroutine has similarities to generator in that they suspend exection until an event occurs, but where a generator returns control to its caller, a coroutine returns control somewhere else.
 
 ### Coroutine Examples
 
