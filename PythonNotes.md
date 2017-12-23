@@ -987,7 +987,7 @@ def main():
 main()
 ```
 
-## Passing Multiple arguments as a Tuple or Dictionary
+## Passing Multiple Arguments as a Tuple or Dictionary
 
 The following demonstrates the use of passing multiple arguments, which is received either as a tuple (with the param preceded by a single asterisk) or as a dictionary (with the param preceded with a double asterisk)
 
