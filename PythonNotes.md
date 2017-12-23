@@ -987,6 +987,21 @@ def main():
 main()
 ```
 
+## Passing Multiple arguements as a Tuple or Dictionary
+
+The following demonstrates the use of passing multiple arguments, which is received either as a tuple (with the param preceded by a single asterisk) or as a dictionary (with the param preceded with a double asterisk)
+
+```python
+def multi_arg(*multi):
+    print(type(multi), ":", multi)
+
+def multi_dict_arg(**mdict):
+    print(type(mdict), " :", mdict)
+
+multi_arg(1, 2, 3, 4)
+multi_dict_arg(one=1, two=2, three=3)
+```
+
 ## Generator Functions
 
 Generator functions can be used to generate sequences of results using **yield** and the **\_next()\_** (**next()** in Python2) method.  The **\_next()\_** method runs the **generator function** until the next **yield** is reached, which **suspends execution**. Execution is **resumed** after the **yield** when the **\_next()\_** method is called again.  The **\_next()\_** method is **implied** in the **for statement**, so it doesn't have to be explicitly provided.
