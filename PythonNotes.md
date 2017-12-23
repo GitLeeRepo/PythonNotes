@@ -987,7 +987,7 @@ def main():
 main()
 ```
 
-## Passing Multiple arguements as a Tuple or Dictionary
+## Passing Multiple arguments as a Tuple or Dictionary
 
 The following demonstrates the use of passing multiple arguments, which is received either as a tuple (with the param preceded by a single asterisk) or as a dictionary (with the param preceded with a double asterisk)
 
@@ -1068,7 +1068,7 @@ Description from [python.org docs](https://docs.python.org/3/library/asyncio-tas
     
 > Calling a coroutine does not start its code running – the coroutine object returned by the call doesn’t do anything until you schedule its execution.
   
-A coroutine's execution is suspended until a future event occurs.  A coroutine has similarities to generator in that they suspend exection until an event occurs, but where a generator returns control to its caller, a coroutine returns control somewhere else.
+A coroutine's execution is suspended until a future event occurs.  A coroutine has similarities to generator in that they suspend execution until an event occurs, but where a generator returns control to its caller, a coroutine returns control somewhere else.
 
 ### Coroutine Examples
 
