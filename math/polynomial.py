@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# calculates the polynomial for x.  The degree is calcuated as the
+# calculates the polynomial for x.  The degree is calculated as the
 # number of coefficients - 1.  Output only formatted for up to 5 
 # single digit coefficients.  Also illustrates the use of __add__
 # and __len__ implementations.

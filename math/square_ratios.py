@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-# Ratios of consecutive squared integers to the prior interation
-# All ratios converge on 1.00 (i.e. two decimals, since thet never
+# Ratios of consecutive squared integers to the prior iteration
+# All ratios converge on 1.00 (i.e. two decimals, since they never
 # truly reaches 1) at 403 iterations
 #
 # To view out to this width direct output to a file and view in
