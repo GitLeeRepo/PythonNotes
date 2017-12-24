@@ -21,6 +21,7 @@ Notes on the Python3 programming language, examples use Python 3 syntax, not Pyt
 * [File Handling](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#file-handling)
 * [Regular Expressions](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#regular-expressions)
 * [Exceptions](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#exceptions)
+* [Decorators](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#decorators)
 
 # References
 
@@ -1119,6 +1120,10 @@ def main():
 main()
 ```
 
+### Decorators
+
+Refer to the [Decorators](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#decorators) section later in this document.
+
 # Modules and Packages
 
 **Modules** provide a means of grouping functions and custom data structures together so that they can be distributed across multiple applications through **import** statements.  **Packages** provide a means of grouping modules together in a logical manner.
@@ -1740,4 +1745,35 @@ except ValueError as err:
     print(err)
 ```
 Note this will generate an error when entering a floating point number, in addition to a string or other non-integer data type.
+
+# Decorators
+
+Example from a PyData YouTube video posted by [Coding Tech](https://www.youtube.com/watch?v=7lmCu8wz8ro&t=3306s):
+
+Demonstrates using a decorator to tie a function to a wrapper function, in this case a 'timer' wrapper function that provides a before and after timing of our function.  As long as the @timer decorator precedes the function we want to time (assuming the wrapper has the same signature as our function, as 'f(x, y)' does with our add(x, y) and sub(x, y) functions), it will call the wrapper, instead of our function directly.  Simply remove the decorator and our function is called directly again (no wrapper).
+
+```python
+from time import time
+
+def timer(func):
+    def f(x, y):
+        before = time()
+        rv = func(x, y)
+        after = time()
+        print('elapsed', after - before)
+        return rv
+    return f
+
+@timer
+def add(x, y):
+    return x + y
+
+@timer
+def sub(x, y):
+    return x - y
+
+print("add(5, 8)", add(5, 8))
+print("sub(5, 8)", sub(5, 8))
+```
+
 
