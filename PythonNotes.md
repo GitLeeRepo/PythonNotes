@@ -1120,7 +1120,7 @@ def main():
 main()
 ```
 
-### Decorators
+### Function Decorators
 
 Refer to the [Decorators](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#decorators) section later in this document.
 
