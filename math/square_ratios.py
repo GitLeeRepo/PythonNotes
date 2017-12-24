@@ -17,13 +17,13 @@ for i in range(iterations):
     ws[0].append(i)
     # the squares to evaluate
     ws[1].append(i**2)
-    # prior / current ratio which is < 0
     if i > 0:
+        # prior / current ratio which is < 1
         ws[2].append(((i-1)**2)/(i**2))
     else:
         ws[2].append(0.0)
-    #current / prior ratio which is > 0
     if i > 1:
+        #current / prior ratio which is > 1
         ws[3].append((i**2)/((i-1)**2))
     else:
         ws[3].append(0.0)
