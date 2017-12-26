@@ -109,5 +109,7 @@ out*.txt
 out?.md
 *.b64
 
-# Test files
+# Test and config files
 test*.py
+sql.cfg
+config.ini
