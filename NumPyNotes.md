@@ -1,6 +1,6 @@
 # Overview
 
-Notes on the numpy package
+Notes on the NumPy package
 
 # References
 
