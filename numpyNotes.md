@@ -2,6 +2,15 @@
 
 Notes on the numpy package
 
+# References
+
+* [NumPy](http://www.numpy.org/)
+* [ScyPy](https://www.scipy.org/)
+* [SymPy](https://www.sympy.org/en/index.html)
+* [Anaconda](https://www.anaconda.com/)
+* [Pyzo](http://www.pyzo.org/)
+
+
 # Install Windows (including Anaconda install info)
 
 I initially installed [Pyzo](http://www.pyzo.org/), and per its recommendation I installed **Anaconda** (**Miniconda for Windows (64-bit)**, because it makes it easier to install scientific packages.  After doing so I now have two Python interpreters on my Windows 10 system, neither of which is on the environment path.  With **Anaconda** this wasn't to much of an issue since it has its own **Andaconda Prompt** utility that runs Python without being on the path.  But **VSCode** could not find it so I ended up adding it to the path anyway.
