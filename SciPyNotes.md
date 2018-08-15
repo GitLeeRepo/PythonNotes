@@ -10,6 +10,10 @@ Notes on the SciPy Stack and its associated packages
 * [Anaconda](https://www.anaconda.com/)
 * [Pyzo](http://www.pyzo.org/)
 
+## YouTube Videos
+
+* [SciPy Overview](https://www.youtube.com/watch?v=MtdLd2lrvag)
+
 # SciPi Stack
 
 **NumPy** is part of the **SciPy Stack** which includes:
