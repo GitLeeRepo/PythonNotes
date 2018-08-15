@@ -35,3 +35,15 @@ import numpy as np
 
 # Install Linux
 
+Installed on Ubuntu running in **Linux Subsystem for Windows**.  I initially installed it using the **sudo apt-get install python-numpy** command.  It appeared to install correctly, but it wasn't recognized by the Python **import** command, either as numpy or python-numpy.  After researching I first installed via **pip (Python Package Index)** utility, which I had to install first with **sudo apt-get install python-pip python3-pip** command, it then recommend I upgrade using **sudo pip install --upgrade pip**.  Finally I installed **NumPy** (after first removing my prior install) using the following command:
+
+```bash
+sudo pip3 install -U numpy
+```
+
+This time Python successfully recognize **NumPy** with the following **import** command:
+
+```python
+sudo pip3 install -U numpy
+```
+
