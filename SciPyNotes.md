@@ -83,6 +83,10 @@ sudo pip3 install -U numpy
 
 # Mathplotlib
 
+## Refer to
+
+* [pyplot_tutorial](https://matplotlib.org/users/pyplot_tutorial.html)
+
 ## Colors and Specifiers
 
 The plot colors are based on **MatLab format strings** and are specified in the plot parameters as strings.  For example,
