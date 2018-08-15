@@ -1,6 +1,6 @@
 # Overview
 
-Notes on the NumPy package
+Notes on the SciPy Stack and its associated packages
 
 # References
 
@@ -53,6 +53,12 @@ To get **numpy** installed I ran the following from the **Pyzo shell**:
 
 ```
 install numpy
+```
+
+This uses the Anaconda installer, so you might as well do it directly in the **Anaconda Prompt** with:
+
+```
+conda install numpy
 ```
 
 I then tested it in a Python script with the following **import command**:
