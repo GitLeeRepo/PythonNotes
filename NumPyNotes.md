@@ -10,6 +10,34 @@ Notes on the NumPy package
 * [Anaconda](https://www.anaconda.com/)
 * [Pyzo](http://www.pyzo.org/)
 
+# SciPi Stack
+
+**NumPy** is part of the **SciPy Stack** which includes:
+
+* Python (2.x >= 2.6 or 3.x >= 3.2)
+* NumPy (>= 1.6)
+* SciPy library (>= 0.10)
+* Matplotlib (>= 1.1)
+* dateutil
+* pytz
+
+With support for at least one backend:
+
+* IPython (>= 0.13)
+* pyzmq
+* tornado
+* pandas (>= 0.8)
+* Sympy (>= 0.7)
+* nose (>= 1.1)
+
+Other software commonly used:
+
+* Anaconda
+* Pyzo
+* jupyter notebook
+* jupyter lab
+* Spyder
+* VSCode
 
 # Install Windows (including Anaconda install info)
 
