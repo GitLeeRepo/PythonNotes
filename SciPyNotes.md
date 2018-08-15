@@ -81,3 +81,22 @@ This time Python successfully recognize **NumPy** with the following **import** 
 sudo pip3 install -U numpy
 ```
 
+# Mathplotlib
+
+## Colors and Specifiers
+
+The plot colors are based on **MatLab format strings** and are specified in the plot parameters as strings.  For example,
+**plt.plot(xpoints, ypoints, 'b-',xpoints, ypoints, 'ro')**, where 'b-' specifies a blue line and 'ro' specifies a red point.
+
+
+### MatLab Colors
+Long Name | Short Name | RGB Triplet |
+----------|------------|-------------|
+blue | b | [0,0,1] |
+black | k [0,0,0] |
+red |r | [1,0,0] |
+green |g | [0,1,0] |
+yellow| y | [1,1,0] |
+cyan | c | [0,1,1] |
+magenta | m [1,0,1] |
+white	w	[1,1,1]
