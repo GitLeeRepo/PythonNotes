@@ -267,6 +267,10 @@ Python Data Analysis Library
 * [Jupyter](https://jupyter.org/)
 * [Jupyter Gallery](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#introductory-tutorials)
 
+## Keyboard Shortcuts
+
+* **Shift-Tab** - display the signature of the function or object under the cursor
+
 ## Displaying Notebooks on GitHub
 
 The **Jupyter notebooks** are in a **JSON** format and can be displayed directly on **GitHub**.  It does a fairly good job of displaying it as markdown, which this format supports.  It does have some issues with **embedded html**, such as **iframes** and header **styles**.  A better display option which will display the notebook without these issues is to open the **GitHub repository notebook** using **nbviewer**.  The downside is that it will only display **public** repo notebooks.  Here is an example of **nbviewer** using my first notepook:
