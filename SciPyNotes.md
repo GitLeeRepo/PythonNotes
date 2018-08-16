@@ -19,6 +19,7 @@ Notes on the SciPy Stack and its associated packages
 ## Jupyter References
 
 * [Jupyter Gallery](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#introductory-tutorials)
+* [Jupyter Notebbok Viewer](https://nbviewer.jupyter.org/)
 
 ## YouTube Videos
 
