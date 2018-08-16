@@ -245,12 +245,24 @@ white     | w          | [1,1,1]     |
 
 Python Data Analysis Library
 
+## Refer to
+
 * [Pandas](https://pandas.pydata.org/)
 
 # IPython
+
+## Refer to
 
 * [IPython](https://ipython.org/)
 
 # Jupyter
 
+## Refer to
+
 * [Jupyter](https://jupyter.org/)
+
+## HTML Versions of Jupyter Notebooks
+
+A **Jupyter notebook** can be saved as an **HTML** file.  For example in in my **SciPy repository**:
+
+![FirstNotebook](https://github.com/GitLeeRepo/SciPy/tree/master/Notebooks/html)
