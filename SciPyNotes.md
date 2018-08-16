@@ -13,7 +13,7 @@ Notes on the SciPy Stack and its associated packages
 * [Matplotib](https://matplotlib.org/)
 * [Pandas](https://pandas.pydata.org/)
 * [IPython](https://ipython.org/)
-^ [Jupyter](https://jupyter.org/)
+* [Jupyter](https://jupyter.org/)
 * [Pyzo](http://www.pyzo.org/)
 
 ## YouTube Videos
