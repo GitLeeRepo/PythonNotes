@@ -271,8 +271,7 @@ Python Data Analysis Library
 
 The **Jupyter notebooks** are in a **JSON** format and can be displayed directly on **GitHub**.  It does a fairly good job of displaying it as markdown, which this format supports.  It does have some issues with **embedded html**, such as **iframes** and header **styles**.  A better display option which will display the notebook without these issues is to open the **GitHub repository notebook** using **nbviewer**.  The downside is that it will only display **public** repo notebooks.  Here is an example of **nbviewer** using my first notepook:
 
-![FirstNotebook](http://nbviewer.jupyter.org/github/GitLeeRepo/JupyterNotebooksPub/blob/master/FirstNotebook.ipynb)
-![FirstNotebook](http://nbviewer.jupyter.org/github/GitLeeRepo/JupyterNotebooksPub/blob/master/FirstNotebook.ipynb)
+[FirstNotebook](http://nbviewer.jupyter.org/github/GitLeeRepo/JupyterNotebooksPub/blob/master/FirstNotebook.ipynb)
 
 ## HTML/PDF/Markdown Versions of Jupyter Notebooks
 
@@ -282,6 +281,6 @@ A **Jupyter notebook** can be saved as an **markdown** file.  For example in in 
 
 This is not really necessary for **GitHub** since it will already disply a **Jupyter notebook** since it is **JSON** wiith markdown in it.  It has the same issues mentions here.  The better option as mentioned above is to display it by adding it to **nbviewer** link as shown above, although it has to be a **public** repository.
 
-![FirstNotebook](https://github.com/GitLeeRepo/SciPy/blob/master/Notebooks/Export/Markdown/FirstNotebook/FirstNotebook.md)
+[FirstNotebook](https://github.com/GitLeeRepo/SciPy/blob/master/Notebooks/Export/Markdown/FirstNotebook/FirstNotebook.md)
 
 For the most part everything displays fine.  It does use some embedded html for some things, which works in some cases (tables work form example), and in others such as iframes and header styles it doesn't render, but displays the hmtml instead.
