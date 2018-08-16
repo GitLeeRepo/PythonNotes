@@ -263,6 +263,10 @@ Python Data Analysis Library
 
 ## HTML/PDF/Markdown Versions of Jupyter Notebooks
 
+### Markdown
+
 A **Jupyter notebook** can be saved as an **markdown** file.  For example in in my **SciPy repository**:
 
 ![FirstNotebook](https://github.com/GitLeeRepo/SciPy/blob/master/Notebooks/Export/Markdown/FirstNotebook/FirstNotebook.md)
+
+For the most part everything displays fine.  It does use some embedded html for some things, which works in some cases (tables work form example), and in others such as iframes and header styles it doesn't render, but displays the hmtml instead.
