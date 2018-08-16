@@ -4,15 +4,22 @@ Notes on the SciPy Stack and its associated packages
 
 # References
 
+## Anaconda and SciPy Stack
+
+* [Anaconda](https://www.anaconda.com/)
 * [NumPy](http://www.numpy.org/)
 * [ScyPy](https://www.scipy.org/)
 * [SymPy](https://www.sympy.org/en/index.html)
-* [Anaconda](https://www.anaconda.com/)
+* [Matplotib](https://matplotlib.org/)
+* [Pandas](https://pandas.pydata.org/)
+* [IPython](https://ipython.org/)
+^ [Jupyter](https://jupyter.org/)
 * [Pyzo](http://www.pyzo.org/)
 
 ## YouTube Videos
 
 * [SciPy Overview](https://www.youtube.com/watch?v=MtdLd2lrvag)
+* [Jupyter Notebook Tutorial](https://www.youtube.com/watch?v=HW29067qVWk)
 
 # SciPi Stack
 
@@ -175,10 +182,45 @@ This time Python successfully recognize **NumPy** with the following **import** 
 sudo pip3 install -U numpy
 ```
 
+# Uppdating Packages using Anaconda
+
+Use the **conda update command** instead of **conda install**, for example:
+
+```
+conda update jupyter
+conda update ipython
+```
+
+# Anaconda
+
+## Refer to
+
+* [Anaconda](https://www.anaconda.com/)
+
+
+# SciPy
+
+## Refer to
+
+* [ScyPy](https://www.scipy.org/)
+
+# NumPy
+
+## Refer to
+
+* [NumPy](http://www.numpy.org/)
+
+# SymPy
+
+## Refer to
+
+* [SymPy](https://www.sympy.org/en/index.html)
+
 # Mathplotlib
 
 ## Refer to
 
+* [Matplotib](https://matplotlib.org/)
 * [pyplot_tutorial](https://matplotlib.org/users/pyplot_tutorial.html)
 
 ## Colors and Specifiers
@@ -198,3 +240,17 @@ yellow    | y          | [1,1,0]     |
 cyan      | c          | [0,1,1]     |
 magenta   | m          | [1,0,1]     |
 white     | w          | [1,1,1]     |
+
+# Pandas
+
+Python Data Analysis Library
+
+* [Pandas](https://pandas.pydata.org/)
+
+# IPython
+
+* [IPython](https://ipython.org/)
+
+# Jupyter
+
+* [Jupyter](https://jupyter.org/)
