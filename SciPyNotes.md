@@ -261,8 +261,8 @@ Python Data Analysis Library
 
 * [Jupyter](https://jupyter.org/)
 
-## HTML Versions of Jupyter Notebooks
+## HTML/PDF/Markdown Versions of Jupyter Notebooks
 
-A **Jupyter notebook** can be saved as an **HTML** file.  For example in in my **SciPy repository**:
+A **Jupyter notebook** can be saved as an **markdown** file.  For example in in my **SciPy repository**:
 
-![FirstNotebook](https://github.com/GitLeeRepo/SciPy/tree/master/Notebooks/html)
+![FirstNotebook](https://github.com/GitLeeRepo/SciPy/blob/master/Notebooks/Export/Markdown/FirstNotebook/FirstNotebook.md)
