@@ -16,6 +16,10 @@ Notes on the SciPy Stack and its associated packages
 * [Jupyter](https://jupyter.org/)
 * [Pyzo](http://www.pyzo.org/)
 
+## Jupyter References
+
+* [Jupyter Gallery](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#introductory-tutorials)
+
 ## YouTube Videos
 
 * [SciPy Overview](https://www.youtube.com/watch?v=MtdLd2lrvag)
@@ -260,6 +264,7 @@ Python Data Analysis Library
 ## Refer to
 
 * [Jupyter](https://jupyter.org/)
+* [Jupyter Gallery](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#introductory-tutorials)
 
 ## HTML/PDF/Markdown Versions of Jupyter Notebooks
 
