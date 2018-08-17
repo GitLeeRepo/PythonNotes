@@ -25,6 +25,7 @@ Notes on the SciPy Stack and its associated packages
 
 * [PythonDataScienceHandbook Online version](https://jakevdp.github.io/PythonDataScienceHandbook/)
 * [Notebooks for PythonDataScienceHandbook](https://github.com/jakevdp/PythonDataScienceHandbook)
+* [Notebooks for Python for Data Analysis](https://github.com/wesm/pydata-book)
 
 ## YouTube Videos
 
