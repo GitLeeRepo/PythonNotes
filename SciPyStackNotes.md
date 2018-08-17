@@ -33,6 +33,10 @@ Notes on the SciPy Stack and its associated packages
 * [Jupyter Notebook Tutorial](https://www.youtube.com/watch?v=HW29067qVWk)
 * [Anaconda Tutorial](https://www.youtube.com/watch?v=YJC6ldI3hWk)
 
+## My Other Notes
+
+* [SciPyStackInstallNotes](https://github.com/GitLeeRepo/PythonNotes/blob/master/SciPyStackInstallNotes.md#overview)
+
 # SciPi Stack
 
 **NumPy** is part of the **SciPy Stack** which includes:
@@ -61,6 +65,10 @@ Other software commonly used:
 * jupyter lab
 * Spyder
 * VSCode
+
+# Installation
+
+Refer to [SciPyStackInstallNotes](https://github.com/GitLeeRepo/PythonNotes/blob/master/SciPyStackInstallNotes.md#overview) for installation notes.
 
 # Install Windows (including Anaconda install info)
 
