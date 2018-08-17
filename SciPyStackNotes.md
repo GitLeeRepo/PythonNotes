@@ -46,7 +46,6 @@ Notes on the SciPy Stack and its associated packages
 * SciPy library (>= 0.10)
 * Matplotlib (>= 1.1)
 * dateutil
-* pytz
 
 With support for at least one backend:
 
@@ -60,7 +59,6 @@ With support for at least one backend:
 Other software commonly used:
 
 * Anaconda
-* Pyzo
 * jupyter notebook
 * jupyter lab
 * Spyder
