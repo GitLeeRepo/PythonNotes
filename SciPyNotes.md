@@ -21,6 +21,11 @@ Notes on the SciPy Stack and its associated packages
 * [Jupyter Gallery](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#introductory-tutorials)
 * [Jupyter Notebbok Viewer](https://nbviewer.jupyter.org/)
 
+## Books
+
+* [PythonDataScienceHandbook Online version](https://jakevdp.github.io/PythonDataScienceHandbook/)
+* [Notebooks for PythonDataScienceHandbook](https://github.com/jakevdp/PythonDataScienceHandbook)
+
 ## YouTube Videos
 
 * [SciPy Overview](https://www.youtube.com/watch?v=MtdLd2lrvag)
