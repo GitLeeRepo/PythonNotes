@@ -202,7 +202,69 @@ conda update ipython
 ## Refer to
 
 * [Anaconda](https://www.anaconda.com/)
+* [Anaconda Tutorial](https://www.youtube.com/watch?v=YJC6ldI3hWk) YouTube video
 
+Refer to the section **Anaconda vs PIP** in the **PIP Package Manager** section on differences between **pip** and **conda**  
+
+## Conda Commands
+
+* Conda help
+* Conda install /<package\> - if you ever have issues with conda (I never have) you can use **pip install** as an alternative.
+* Conda update /<package\>
+* Conda list - list installed packages.  Note those that begin with **py** in the **Build Column** are also listed by **pip list**
+* conda create --name my_app /<list of packages for the environment\>  --> create a new **environment**
+* activate my_app - activate the named environment you previously created
+* deactivate my_app - deactivate the current environment
+* conda env list - list the environments that have been created
+* conda info --envs -  info on enviroments that have been created
+
+## Virtual Environments
+
+You can create **virtual enironments** in **Anaconda** so that you can have different environments for different versions of Python and the various packages.  You create an new environment by entering:
+
+```bash
+conda create --name my_app /<list of packages for the environment\>
+```
+
+To **activate** the environment:
+
+```bash
+activate my_app
+# note that on Mac or Linux it is "source activate my_app*
+```
+
+The name of your current environment displays above your **prompt**.  The default environment is **base**.
+
+To **deactivate** the environment:
+
+```bash
+deactivate my_app
+# note that on Mac or Linux it is "source deactivate my_app*
+```
+
+To list the environments available:
+
+```bash
+conda env list
+# or for info
+conda info --envs
+```
+
+To install a Python 2.7 Enviroment
+
+```bash
+conda create --name my_py27 python=2.7 /<list of packages for the environment\>
+```
+
+To remove an environtment:
+
+```bash
+conda remove --name my_app --all
+# will remove all packages and the environment
+# or
+conda remove --name my_app /<list of packages in the environment\>
+# to remove specific packages
+```
 
 # SciPy
 
@@ -305,6 +367,13 @@ It could have also been installed with
 ```
 conda install pip
 ```
+
+## PIP Commands
+
+* pip help
+* pip list
+* pip install
+* pip show - show information on packages
 
 ## Blog Post on PIP vs Conda
 
