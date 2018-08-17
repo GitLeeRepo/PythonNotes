@@ -296,6 +296,7 @@ conda remove --name my_app /<list of packages in the environment\>
 
 * [Matplotib](https://matplotlib.org/)
 * [pyplot_tutorial](https://matplotlib.org/users/pyplot_tutorial.html)
+* [Matplotlib GitHub](https://github.com/matplotlib/matplotlib)
 
 ## Colors and Specifiers
 
