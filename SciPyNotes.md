@@ -25,6 +25,7 @@ Notes on the SciPy Stack and its associated packages
 
 * [SciPy Overview](https://www.youtube.com/watch?v=MtdLd2lrvag)
 * [Jupyter Notebook Tutorial](https://www.youtube.com/watch?v=HW29067qVWk)
+* [Anaconda Tutorial](https://www.youtube.com/watch?v=YJC6ldI3hWk)
 
 # SciPi Stack
 
