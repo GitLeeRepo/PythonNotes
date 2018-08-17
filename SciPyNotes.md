@@ -288,3 +288,29 @@ This is not really necessary for **GitHub** since it will already disply a **Jup
 [FirstNotebook](https://github.com/GitLeeRepo/SciPy/blob/master/Notebooks/Export/Markdown/FirstNotebook/FirstNotebook.md)
 
 For the most part everything displays fine.  It does use some embedded html for some things, which works in some cases (tables work form example), and in others such as iframes and header styles it doesn't render, but displays the hmtml instead.
+
+# PIP Package Utility
+
+## Installation
+
+Installed on 2018-08-16 from the **Anaconda prompt**:
+
+```
+python -m pip install --upgrade pip
+```
+
+It could have also been installed with
+
+```
+conda install pip
+```
+
+## Blog Post on PIP vs Conda
+
+Having been involved in the python world for so long, we are all aware of pip, easy_install, and virtualenv, but these tools did not meet all of our specific requirements. The main problem is that they are focused around Python, neglecting non-Python library dependencies, such as HDF5, MKL, LLVM, etc., which do not have a setup.py in their source code and also do not install files into Python’s site-packages directory.
+
+So Conda is a packaging tool and installer that aims to do more than what pip does; handle library dependencies outside of the Python packages as well as the Python packages themselves. Conda also creates a virtual environment, like virtualenv does.
+
+As such, Conda should be compared to Buildout perhaps, another tool that lets you handle both Python and non-Python installation tasks.
+
+Because Conda introduces a new packaging format, you cannot use pip and Conda interchangeably;  pip cannot install the Conda package format. You can use the two tools side by side (by installing pip with conda install pip) but they do not interoperate either.
