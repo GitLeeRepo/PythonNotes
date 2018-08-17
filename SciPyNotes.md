@@ -311,12 +311,31 @@ white     | w          | [1,1,1]     |
 
 # Pandas
 
-Python Data Analysis Library
+**Python Data Analysis Library**.  **Pandas** main focus is on **dataframes**.  
+
+**Dataframes** are very much like **spreadsheets**.  Pandas and dataframes have the advantage over spreadsheets in that they **scale up** much better, whereas an **Excel spreadsheet** can really start to bog down if it gets too big.
+
+**Pandas** like **SciPy** and **NumPi** is written in the **C programming language**
 
 ## Refer to
 
 * [Pandas](https://pandas.pydata.org/)
 
+## Installations/Updates
+
+2018-08-16 - installed pandas-datareader (pandas itself was previously installed)
+
+## Issues
+
+Received an error when trying to import **pandas_datareader.data** with the **is_list_like** object, a Google seach found the **pd.core.common.is_list_like = pd.api.types.is_list_like** fix for this by placing it before the **import**.
+
+```python
+import pandas as pd
+import datetime
+# the following is needed to prevent import pandas_datareader.data as web from throwing an error
+pd.core.common.is_list_like = pd.api.types.is_list_like
+import pandas_datareader.data as web
+```
 # IPython
 
 ## Refer to
