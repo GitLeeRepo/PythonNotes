@@ -348,9 +348,18 @@ import pandas_datareader.data as web
 
 * [IPython](https://ipython.org/)
 
+## Keyboard Shortcuts
+
+* **Ctl-D** - Exit IPython
+
+## Magic Commands
+
+Refer to the **Jupyter** section.
+
 ## Tips
 
-* mutliline input - use **%cpaste** magic. This is intended for pasting code, but has the side effect of enabling multiline input.
+* **mutliline input** - use **%cpaste** magic. This is intended for pasting code, but has the side effect of enabling multiline input.
+* **copy multiline code to clipboard** - by using the **history \<index\>** (where index is the number in the input brackets) you will display the text without the leading dashes, which can then be highlighted and pasted.
 
 # Jupyter
 
@@ -362,6 +371,11 @@ import pandas_datareader.data as web
 ## Keyboard Shortcuts
 
 * **Shift-Tab** - display the signature of the function or object under the cursor
+
+## Magic Commands
+
+* **%cpaste** - more useful for **IPython** by using it to allow **multiline** input.  Its intention was to allow you to paste code into **IPython**, but you really don't need this to do that, just paste it.
+* **history \<index\>** -  displays the entry from a prior **input cell** by referring to its **index** number in its brackets
 
 ## Displaying Notebooks on GitHub
 
