@@ -205,7 +205,7 @@ conda update ipython
 
 # Anaconda
 
-## Refer to
+## References
 
 * [Anaconda](https://www.anaconda.com/)
 * [Anaconda Tutorial](https://www.youtube.com/watch?v=YJC6ldI3hWk) YouTube video
@@ -274,25 +274,25 @@ conda remove --name my_app /<list of packages in the environment\>
 
 # SciPy
 
-## Refer to
+## References
 
 * [ScyPy](https://www.scipy.org/)
 
 # NumPy
 
-## Refer to
+## References
 
 * [NumPy](http://www.numpy.org/)
 
 # SymPy
 
-## Refer to
+## References
 
 * [SymPy](https://www.sympy.org/en/index.html)
 
 # Mathplotlib
 
-## Refer to
+## References
 
 * [Matplotib](https://matplotlib.org/)
 * [pyplot_tutorial](https://matplotlib.org/users/pyplot_tutorial.html)
@@ -317,15 +317,15 @@ white     | w          | [1,1,1]     |
 
 # Pandas
 
+## References
+
+* [Pandas](https://pandas.pydata.org/)
+
 **Python Data Analysis Library**.  **Pandas** main focus is on **dataframes**.  
 
 **Dataframes** are very much like **spreadsheets**.  Pandas and dataframes have the advantage over spreadsheets in that they **scale up** much better, whereas an **Excel spreadsheet** can really start to bog down if it gets too big.
 
 **Pandas** like **SciPy** and **NumPi** is written in the **C programming language**
-
-## Refer to
-
-* [Pandas](https://pandas.pydata.org/)
 
 ## Installations/Updates
 
@@ -344,13 +344,17 @@ import pandas_datareader.data as web
 ```
 # IPython
 
-## Refer to
+## References
 
 * [IPython](https://ipython.org/)
 
+## Tips
+
+* mutliline input - use **%cpaste** magic. This is intended for pasting code, but has the side effect of enabling multiline input.
+
 # Jupyter
 
-## Refer to
+## References
 
 * [Jupyter](https://jupyter.org/)
 * [Jupyter Gallery](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#introductory-tutorials)
@@ -378,6 +382,10 @@ This is not really necessary for **GitHub** since it will already disply a **Jup
 For the most part everything displays fine.  It does use some embedded html for some things, which works in some cases (tables work form example), and in others such as iframes and header styles it doesn't render, but displays the hmtml instead.
 
 # PIP Package Utility
+
+## References
+
+tbd
 
 ## Installation
 
