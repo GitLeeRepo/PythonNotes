@@ -16,6 +16,10 @@ Notes on the SciPy Stack and its associated packages
 * [Jupyter](https://jupyter.org/)
 * [Pyzo](http://www.pyzo.org/)
 
+## SymPy References
+
+* [SymPy Documentation](http://docs.sympy.org/latest/index.html)
+
 ## Jupyter References
 
 * [Jupyter Gallery](https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#introductory-tutorials)
