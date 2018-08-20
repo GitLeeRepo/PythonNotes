@@ -126,7 +126,7 @@ import pandas as pd
 
 # Install Linux
 
-## Numpy Install
+## NumPy Install
 
 You need to use the **pip3 install**, as the standard **sudo apt-get install** doesn't work correctly.  It installs, but the packages are not seen by **Python's import** statement.
 
@@ -138,8 +138,20 @@ sudo pip3 install -U numpy
 
 This time Python successfully recognize **NumPy** with the following **import** command:
 
-```python
-sudo pip3 install -U numpy
+```bash
+$sudo pip3 install -U numpy
+# note I should have done the following instead, but in the case of numpy the above worked, but with a warning
+# see the issue section for sympy and pandas below for more details
+$sudo pip3 install -U numpy
+```
+
+## SymPy and Pandas install
+
+Note this works, but only after resolving issues in the section below.  If I would have done it like this to begin with I think it probably would have worked the first time.
+
+```bash
+$sudo -H pip3 install sympy
+$sudo -H pip3 install pandas
 ```
 
 ## Issue installing sympy and pandas
