@@ -154,6 +154,11 @@ $sudo -H pip3 install sympy
 $sudo -H pip3 install pandas
 ```
 
+## MatPlotLib Install Comment
+
+Since this is on **Ubuntu** running under **Linux Subsystem for Windows** I didn't see any point in installing **matplotlib** since this environment doesn't support a graphical interface.  I guess I could install **IPython/Jupyer Notebook** server and run it from the web interface of my Windows session.  But since I am already running **Jupyter Notebook** on this Windows machine, so I don't see any reason to do this now.
+
+
 ## Issue installing sympy and pandas
 
 
