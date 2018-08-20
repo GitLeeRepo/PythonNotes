@@ -128,7 +128,9 @@ import pandas as pd
 
 ## Numpy Install
 
-Installed on Ubuntu running in **Linux Subsystem for Windows**.  I initially installed it using the **sudo apt-get install python-numpy** command.  It appeared to install correctly, but it wasn't recognized by the Python **import** command, either as numpy or python-numpy.  After researching I first installed via **pip (Python Package Index)** utility, which I had to install first with **sudo apt-get install python-pip python3-pip** command, it then recommend I upgrade using **sudo pip install --upgrade pip**.  Finally I installed **NumPy** (after first removing my prior install) using the following command:
+You need to use the **pip3 install**, as the standard **sudo apt-get install** doesn't work correctly.  It installs, but the packages are not seen by **Python's import** statement.
+
+I Installed on Ubuntu running in **Linux Subsystem for Windows**.  I I installed **NumPy** using the following command:
 
 ```bash
 sudo pip3 install -U numpy
@@ -142,6 +144,8 @@ sudo pip3 install -U numpy
 
 ## Issue installing sympy and pandas
 
+
+### Preliminaries
 
 Note these python packages are installed in:
 
@@ -188,6 +192,7 @@ ran
 ```bash
 $pip3 install pandas
 ```
+
 Note this was without sudo or sudo -H and it worked (but sympy didn't and needed sudo -H).  Later (see below) discovered that even though this worked and **import pandas** worked, pandas didn't appear in the **/usr/local/lib/python3.5/dist-packages directory**, but it did appear in the **python2.7** directory
 
 I reran with **sudo -H** and it now shows up there
