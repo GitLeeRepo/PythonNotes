@@ -173,8 +173,12 @@ sympy-1.2.dist-info
 Note that when using **sudo** with pip or pip3 installs you need to **include the -H flag**, **sudo -h pip install**, or else you get the following warning/error (think just a warning since some installs with this were successful):
 
 ```
-The directory '/home/tracy/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-The directory '/home/tracy/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/home/tracy/.cache/pip/http' or its parent directory is not owned by the current user and 
+the cache has been disabled. Please check the permissions and owner of that directory. If executing pip 
+with sudo, you may want sudo's -H flag.
+The directory '/home/tracy/.cache/pip' or its parent directory is not owned by the current user and caching 
+wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you 
+may want sudo's -H flag.
 ```
 
 The sudo -H will use the invoking user's permissions
