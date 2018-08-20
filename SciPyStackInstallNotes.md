@@ -140,6 +140,121 @@ This time Python successfully recognize **NumPy** with the following **import** 
 sudo pip3 install -U numpy
 ```
 
+## Issue installing sympy and pandas
+
+
+Note these python packages are installed in:
+
+```
+/usr/local/lib/python2.7
+/usr/local/lib/python3.5
+```
+for python3:
+
+```
+/usr/local/lib/python3.5/dist-packages
+```
+
+which contains
+
+```
+isympy.py  
+mpmath  
+mpmath-1.0.0.dist-info  
+numpy  
+numpy-1.15.0.dist-info  
+pandas
+pandas-0.23.4.dist-info
+__pycache__  
+sympy  
+sympy-1.2.dist-info
+```
+
+Note that when using **sudo** with pip or pip3 installs you need to **include the -H flag**, **sudo -h pip install**, or else you get the following warning/error (think just a warning since some installs with this were successful):
+
+```
+The directory '/home/tracy/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+The directory '/home/tracy/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
+```
+
+The sudo -H will use the invoking user's permissions
+
+ran
+
+```bash
+$pip3 install pandas
+```
+Note this was without sudo or sudo -H and it worked (but sympy didn't and needed sudo -H).  Later (see below) discovered that even though this worked and **import pandas** worked, pandas didn't appear in the **/usr/local/lib/python3.5/dist-packages directory**, but it did appear in the **python2.7** directory
+
+I reran with **sudo -H** and it now shows up there
+
+When installing **pandas** It gives info message about upgrading pip:
+
+```bash
+You are using pip version 8.1.1, however version 18.0 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+```
+### Issue started here
+
+```bash
+$pip3 install --upgrade pip
+```
+
+This worked but **broke my pip3** (online posts said it breaks the system installed pip)
+
+**Evidence it broke** was when:
+Running sympy install
+
+```bash
+$pip3 install sympy
+#and
+$sudo -H pip3 install sympy
+```
+
+failed with:
+
+```bash
+Traceback (most recent call last):
+  File "/usr/bin/pip3", line 9, in <module>
+    from pip import main
+ImportError: cannot import name 'main'
+```
+
+I tried a suggested fix of uninstalling and reinstalling pip/pip3 with:
+
+```bash
+$sudo python3 -m pip uninstall pip && sudo apt install python3-pip --reinstall
+```
+
+This ran successfully but didn't fix the issue.  But after the fix that did work, by starting a **new shell**, when I exited back I was able to later run the install **$sudo -H pip3 install pandas**, so **maybe it eventually got sorted out and did work**.
+
+### Fix starts here
+
+Another suggestion, which **did work**, was to start a new bash shell, which won't be affected by the broken pip3
+
+```bash
+$bash
+```
+
+tried installing sympy first without sudo, got most of the way through, but failed trying to copy to \usr\lib directory
+
+```bash
+$sudo -H pip3 install sympy
+```
+
+Finally **this worked** and the **import sympy also worked**
+
+I then noticed **pandas** wasn't in the **/usr/local/lib/python3.5/dist-packages** directory.  So I reinstalled with **sudo -H**
+
+```bash
+$sudo -H pip3 install pandas
+```
+
+When I ran this I had exited back to the **original shell** and now the **pip3 install** worked.  Not sure if it will was just in this case or whether it will now work correctly in all other cases.
+
+It continued to work (not sure how it worked before, it was in the **python2.7** directory, but more likely it was in my local environment)
+
+
 # Uppdating Packages using Anaconda
 
 Use the **conda update command** instead of **conda install**, for example:
