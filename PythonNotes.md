@@ -1494,6 +1494,9 @@ left           right
 
 >>> print("{:5d}".format(42)) # integer right justified with total 5 characters (3 space on front)
    42
+   
+>>>print('{:15,d}'.format(123456789)) # display with commas
+123,456,789
 
 >>> print("{:6.3f}".format(42.987654321)) # rounds to 3 decimals, occupies 6 total (incl decimal) so no indent
 42.988
