@@ -836,11 +836,11 @@ False
 if a > b:
     print ("a > b")
 elif a < b:
-    printf("a < b")
+    print("a < b")
 elif a == b:
-    printf("a == b")
+    print("a == b")
 else:
-    printf("Now that's interesting")
+    print("Now that's interesting")
 ```
 
 ## Using pass in conditions
@@ -851,7 +851,7 @@ If you don't want to do anything on a particular branch of a condition you can u
 if a > b:
     pass
 else:
-    print("b > a")
+    print("b >= a")
     
 ```
 
@@ -860,6 +860,8 @@ else:
 Note that both **for** and **while** loops support **break** to break out of the loop, and **continue** to jump back to the top of the loop.
 
 ## For Loop
+
+Also demonstates the **range()** function.
 
 ```python
 # prints 0 to 4
