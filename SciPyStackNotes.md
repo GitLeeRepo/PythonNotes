@@ -157,7 +157,7 @@ conda remove --name my_app /<list of packages in the environment\>
 
 ## References
 
-* [SymPy01](https://github.com/GitLeeRepo/SciPy/blob/master/Notebooks/SymPy01.ipynb) -> My **SymPy notebook** which is a better way of displaying notes than in the current document
+* [SymPy01](https://github.com/GitLeeRepo/SciPy/blob/master/Notebooks/SymPy01.ipynb) -- My **SymPy notebook** which is a better way of displaying notes than in the current document
 * [SymPy](https://www.sympy.org/en/index.html)
 
 # Mathplotlib
