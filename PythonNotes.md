@@ -39,6 +39,11 @@ Notes on the Python3 programming language, examples use Python 3 syntax, not Pyt
 * [Python Crash Course](https://www.youtube.com/watch?v=oy4GOI9vn5M) - Traversy
 * [Python Programming](https://www.youtube.com/watch?v=N4mEzFDjqtA) - Derek Banas
 
+## My Other Notes
+
+* [PHPNotes](https://github.com/GitLeeRepo/PHPNotes/blob/master/PHPNotes.md#overview)
+* [JavaScriptNotes](https://github.com/GitLeeRepo/JavaScriptNotes/blob/master/JavaScriptNotes.md#overview)
+
 # Concepts and Terminology
 
 * **\>\>\>** - as used in this document is simply the prompt as displayed in the **Python Shell**.  It precedes a Python statement, and if followed by a line without these angle brackets, then these lines represents the output of that statement.  These angle brackets are not used for those sections that represent the code as it appears in a script file, rather than in the interactive shell. 
