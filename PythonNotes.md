@@ -2,7 +2,29 @@
 
 Notes on the Python3 programming language, examples use Python 3 syntax, not Python 2.
 
-## Contents
+# References
+
+* [Python 3.5.4 Documentation](https://docs.python.org/3.5/)
+* [Python Style Guide](https://www.python.org/dev/peps/pep-0008/#naming-conventions) - naming conventions, etc.
+
+## Books
+
+* [Programming in Python 3: A Complete Introduction to the Python Language](https://www.amazon.com/gp/product/B002YYWEHW)
+* [Python Essentials](https://www.amazon.com/Python-Essential-Reference-Developers-Library-ebook/dp/B002EF2AQ6)
+
+## YouTube Videos
+
+* [Google Python Class Series](https://www.youtube.com/watch?v=tKTZoB2Vjuk)
+* [Python Crash Course](https://www.youtube.com/watch?v=oy4GOI9vn5M) - Traversy
+* [Python Programming](https://www.youtube.com/watch?v=N4mEzFDjqtA) - Derek Banas
+
+## My Other Notes
+
+* [PHPNotes](https://github.com/GitLeeRepo/PHPNotes/blob/master/PHPNotes.md#overview)
+* [JavaScriptNotes](https://github.com/GitLeeRepo/JavaScriptNotes/blob/master/JavaScriptNotes.md#overview)
+* [NodejNotes](https://github.com/GitLeeRepo/NodejsNotes/blob/master/NodejNotes.md#overview)
+
+# Contents
 
 * [References](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#references)
 * [Concepts and Terminology](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#concepts-and-terminology)
@@ -24,27 +46,6 @@ Notes on the Python3 programming language, examples use Python 3 syntax, not Pyt
 * [Decorators](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#decorators)
 * [Web Frameworks](https://github.com/GitLeeRepo/PythonNotes/blob/master/PythonNotes.md#web-frameworks)
 
-
-# References
-
-* [Python 3.5.4 Documentation](https://docs.python.org/3.5/)
-* [Python Style Guide](https://www.python.org/dev/peps/pep-0008/#naming-conventions) - naming conventions, etc.
-
-## Books
-
-* [Programming in Python 3: A Complete Introduction to the Python Language](https://www.amazon.com/gp/product/B002YYWEHW)
-* [Python Essentials](https://www.amazon.com/Python-Essential-Reference-Developers-Library-ebook/dp/B002EF2AQ6)
-
-## YouTube Videos
-
-* [Google Python Class Series](https://www.youtube.com/watch?v=tKTZoB2Vjuk)
-* [Python Crash Course](https://www.youtube.com/watch?v=oy4GOI9vn5M) - Traversy
-* [Python Programming](https://www.youtube.com/watch?v=N4mEzFDjqtA) - Derek Banas
-
-## My Other Notes
-
-* [PHPNotes](https://github.com/GitLeeRepo/PHPNotes/blob/master/PHPNotes.md#overview)
-* [JavaScriptNotes](https://github.com/GitLeeRepo/JavaScriptNotes/blob/master/JavaScriptNotes.md#overview)
 
 # Concepts and Terminology
 
